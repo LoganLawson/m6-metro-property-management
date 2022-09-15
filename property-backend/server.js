@@ -1,30 +1,33 @@
-const express = require('express');
-const cors = require('cors');
-const mongoose = require('mongoose');
+const { MongoClient } = require("mongodb");
+const express = require("express");
+const { response } = require('express');
+const port = 3005
+const app = express()
 
-require('dotenv').config();
+const uri = "mongodb://root:example@localhost:27017";
+const options = { authSource: "admin" };
+const client = new MongoClient(uri, options);
 
-const app = express();
-const port = process.env.PORT || 5000;
+const retrieve = async (q) => {
+  try {
+    await client.connect(); 
+    const db = client.db("metroProperty");
+    const col = db.collection("properties");
+    const cursor = col.find(q);
+    return await cursor.toArray()
+  } finally {
+    client.close;
+  }
+}
 
-app.use(cors());
-app.use(express.json());
+const router = express.Router();
+app.use('/properties', router);
 
-const uri = process.env.ATLAS_URI;
-mongoose.connect(uri
-);
-
-const connection = mongoose.connection;
-connection.once('open', () => {
-    console.log("MondoDB database connection established successfully");
-})
-
-const exercisesRouter = require('./routes/exercises');
-const usersRouter = require('./routes/users');
-
-app.use('/exercises', exercisesRouter);
-app.use('/users', usersRouter);
+router.get('/', async (req, res) => {
+  const properties = await retrieve(req.query);
+  res.send(properties)
+  })
 
 app.listen(port, () => {
-    console.log(`Server is running on port: ${port}`);
-});
+    console.log(`listening on port ${port}`)
+})
