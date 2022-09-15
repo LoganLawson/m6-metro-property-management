@@ -1,7 +1,6 @@
-const { MongoClient } = require("mongodb");
 const express = require("express");
-const { response } = require("express");
-const cors = require("cors");
+var cors = require("cors");
+const { MongoClient } = require("mongodb");
 const app = express();
 const port = 3005;
 
@@ -26,7 +25,7 @@ app.use(cors());
 const router = express.Router();
 app.use("/properties", router);
 
-router.get("/", async (req, res) => {
+router.get("/", cors(), async (req, res) => {
   const properties = await retrieve(req.query);
   res.send(properties);
 });
