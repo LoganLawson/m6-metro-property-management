@@ -19,9 +19,11 @@ connection.once('open', () => {
     console.log("MondoDB database connection established successfully");
 })
 
+const propertyRouter = require('./routes/property');
 const exercisesRouter = require('./routes/exercises');
 const usersRouter = require('./routes/users');
 
+app.use('/property', propertyRouter);
 app.use('/exercises', exercisesRouter);
 app.use('/users', usersRouter);
 
