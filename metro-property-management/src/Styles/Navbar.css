@@ -1,0 +1,10 @@
+.nav-link {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-list {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}/*# sourceMappingURL=Navbar.css.map */

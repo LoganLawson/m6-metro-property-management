@@ -1,14 +1,17 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import "../Styles/Navbar.css";
 
 function Navbar() {
   return (
     <nav className='navbar'>
-      <Link to='/' className='navbar-brand'>ExerciseTracker</Link>
       <div className='navbar-collapse'>
-        <ul className='navbar-nav'>
+        <ul className='navbar-list'>
           <li className='navbar-item'>
-            <Link to='/' className='nav-link'>Exercises</Link>
+            <Link to='/Home' className='nav-link'> home </Link>
+          </li>
+          <li className='navbar-item'>
+            <Link to='/exercisehome' className='nav-link'>Exercises</Link>
           </li>
           <li className='navbar-item'>
             <Link to='/create' className='nav-link'>Create Exercise Log</Link>

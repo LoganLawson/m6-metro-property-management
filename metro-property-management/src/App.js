@@ -4,10 +4,10 @@ import LoganSort from './Components/LoganSort'
 import BrandonSort from './Components/BrandonSort'
 import RanjuSort from './Components/RanjuSort'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import ExerciseList from './Components/exercise-list.component';
-// import EditExercise from './Components/edit-exercise.component';
-// import CreateExercise from './Components/create-exercise.component';
-// import CreateUser from './Components/create-user.component';
+import ExerciseList from './Components/ExerciseList';
+import EditExercise from './Components/EditExercise';
+import CreateExercise from './Components/CreateExercise';
+import CreateUser from './Components/CreateUser';
 
 function App() {
   return (
@@ -19,10 +19,10 @@ function App() {
 					<Route path="/Logan" element={<LoganSort/>} />
 					<Route path="/Ranju" element={<RanjuSort/>} />
 					<Route path="/Brandon" element={<BrandonSort/>} />
-					{/* <Route path="/exercisehome" exact component={ExerciseList} />
-					<Route path="/edit/:id" component={EditExercise} />
-					<Route path="/create" component={CreateExercise} />
-					<Route path="/user" component={CreateUser} /> */}
+					<Route path="/exercisehome" element={<ExerciseList/>} />
+					<Route path="/edit/:id" element={<EditExercise/>} />
+					<Route path="/create" element={<CreateExercise/>} />
+					<Route path="/user" element={<CreateUser/>} />
         </Routes>
       </Router>
     </div>
