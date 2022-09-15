@@ -5,7 +5,6 @@ import bathGlyph from '../../images/bath.svg'
 import carGlyph from '../../images/car.svg'
 
 function PropertyCard(props) {
-  console.log(props.propertyData.rate)
 
   return (
     <div className={styles.container}>
