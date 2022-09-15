@@ -8,7 +8,7 @@ function Navbar() {
       <div className='navbar-collapse'>
         <ul className='navbar-list'>
           <li className='navbar-item'>
-            <Link to='/Home' className='nav-link'> home </Link>
+            <Link to='/Home' className='nav-link'> Home </Link>
           </li>
           <li className='navbar-item'>
             <Link to='/exercisehome' className='nav-link'>Exercises</Link>
