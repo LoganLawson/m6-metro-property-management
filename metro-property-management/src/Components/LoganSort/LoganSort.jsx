@@ -4,6 +4,7 @@ import axios from 'axios';
 import styles from './LoganSort.module.css'
 
 import PropertyCard from './PropertyCard'
+import quickSortArray from './quickSortArray.js'
 
 const imsrc = 'https://stonewood.co.nz/wp-content/uploads/elementor/thumbs/Queenstown-Franchise-pp2wouxopkdjjz7op90pgmrjgqxcdm8jaa56lsuu8s.jpg'
 
@@ -43,17 +44,22 @@ function LoganSort() {
   if (error) return `Error: ${error.message}`;
 
   const propertyCards = properties.map(property =>
-    <>
-      <PropertyCard propertyData={property} imageSource={imsrc}/>
-    </>
+      <PropertyCard key={property._id} propertyData={property} imageSource={imsrc}/>
   );
 
-  // order properties
+  const sort = (e) => {
+    e.preventDefault();
+    console.log('unsorted')
+    console.log(properties)
+    console.log('sorted');
+    setProperties(quickSortArray(properties, 'title'))
+  }
 
   return (
     <div className={styles.container}>
         <h2>Quick Sort Logan</h2>
         <Link to='/Home'> <h6>home</h6> </Link>
+        <button onClick={sort}>sort</button>
         <div className={styles['cards-section']}>
           {propertyCards}
         </div>
