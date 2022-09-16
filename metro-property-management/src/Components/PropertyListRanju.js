@@ -12,37 +12,47 @@ function PropertyListRanju() {
 
       if(response.ok){
         setProperty(json);
+        //setPropertySortedList(properties);
       }
     }
     fetchProperty()
   },[])
   
-  //Quick sort function
-  function quickSort(proper,length = proper.length-1,start=0){
-    if(proper.length < 2){
-        return proper; // base case
-    }
-    const pivot = proper[proper.length-1];
-    const left  = [];
-    const right = [];
-    while (start < length) {
-      if (proper[start] < pivot){
-        left.push(proper[start])
-      }
-      else {
-        right.push(proper[start])
-      }
-    start++ //  incrementing start value
-    }
-    return [...quickSort(left), pivot, ...quickSort(right)]
+  function quickSort(){
+    setPropertySortedList(properties);
+    console.log("sort called");
+    console.log(propertySortedList);
+    return;
   }
-  //console.log(quickSort([5,8,7,9,6,4,3,2,1]));
+
+  //Quick sort function
+  // function quickSort(numArray,length = numArray.length,start=1){
+  //   if(numArray.length < 2){
+  //       return numArray; // base case
+  //   }
+  //   //const pivot = numArray[numArray.length-1];
+  //   const pivot = numArray[0];
+  //   const left  = [];
+  //   const right = [];
+  //   while (start < length) {
+  //     if (numArray[start] < pivot){
+  //       left.push(numArray[start])
+  //     }
+  //     else {
+  //       right.push(numArray[start])
+  //     }
+  //   start++ //  incrementing start value
+  //   }
+  //   return [...quickSort(left), pivot, ...quickSort(right)]
+  // }
+  // console.log(quickSort([9,8,7,6,1,4,3,2,5]));
   //console.log(properties);
 
   return (
     <div className='property-list'>
       <Navbar/>
       <h1>Property List</h1>
+      <button onClick={quickSort}>Click Sort</button>
       <table>
         <thead>
         <tr>
