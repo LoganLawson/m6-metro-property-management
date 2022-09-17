@@ -6,8 +6,8 @@
   background-size: cover;
   font-family: "Montserrat";
 
-  padding-top: 15em;
-  padding-bottom: 15em;
+  padding-top: 14em;
+  padding-bottom: 4.688rem;
 }
 
 .heroContent {
@@ -31,6 +31,7 @@
 .cardContainer {
   display: flex;
   gap: 5em;
+  padding-top: 11.75rem;
 }
 
 .heroCards {
