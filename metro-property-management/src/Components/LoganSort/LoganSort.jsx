@@ -5,6 +5,8 @@ import styles from './LoganSort.module.css'
 
 import PropertyCard from './PropertyCard'
 import quickSortArray from './quickSortArray.js'
+import Navbar from '../Header/Navbar';
+import Footer from '../Footer/Footer'
 
 const imsrc = 'https://stonewood.co.nz/wp-content/uploads/elementor/thumbs/Queenstown-Franchise-pp2wouxopkdjjz7op90pgmrjgqxcdm8jaa56lsuu8s.jpg'
 
@@ -56,6 +58,8 @@ function LoganSort() {
   }
 
   return (
+    <>
+    <Navbar />
     <div className={styles.container}>
         <h2>Quick Sort Logan</h2>
         <Link to='/Home'> <h6>home</h6> </Link>
@@ -66,6 +70,8 @@ function LoganSort() {
         
         <span>hello</span>
     </div>
+    <Footer />
+    </>
   )
 };
 

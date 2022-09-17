@@ -11,6 +11,9 @@
     ;
 }
 
+.Navbar {
+    grid-area: header;
+}
 .cards-section {
     grid-area: main;
     display: flex;
@@ -19,4 +22,7 @@
         
     gap: 2rem;
     padding: 2rem;
+}
+.Footer {
+    grid-area: footer;
 }
