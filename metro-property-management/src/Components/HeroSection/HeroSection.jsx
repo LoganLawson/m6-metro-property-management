@@ -1,3 +1,4 @@
+import HeroCard from "./HeroCard";
 import styles from "./HeroSection.module.css";
 
 const Navbar = () => {
@@ -12,6 +13,13 @@ const Navbar = () => {
           <br />
           services tailored to the needs of our clients
         </p>
+        <div className={styles.cardContainer}>
+          <HeroCard
+            title="For Property Owners"
+            text="Get a Free Appraisal Now"
+          />
+          <HeroCard title="For Tenants" text="Start your Search Today" />
+        </div>
       </div>
     </div>
   );
