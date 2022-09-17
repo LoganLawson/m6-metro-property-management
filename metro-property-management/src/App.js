@@ -1,6 +1,7 @@
 import './App.css';
+import "@fontsource/montserrat";
 import Home from './Components/Home'
-import LoganSort from './Components/LoganSort'
+import LoganSort from './Components/LoganSort/LoganSort'
 import BrandonSort from './Components/BrandonSort'
 import RanjuSort from './Components/RanjuSort'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
