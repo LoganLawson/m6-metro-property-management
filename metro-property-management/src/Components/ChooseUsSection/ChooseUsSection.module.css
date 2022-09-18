@@ -1,0 +1,53 @@
+.container {
+  background-color: rgba(243, 243, 243, 0.863);
+  background-image: url("../../images/homepage-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: color-burn;
+
+  padding-top: 8.875rem;
+  padding-bottom: 10.875rem;
+
+  font-family: "Montserrat";
+  font-style: normal;
+}
+
+.chooseUsHeading {
+  padding-bottom: 4em;
+}
+
+.chooseUsTitle {
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.chooseUsText {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.chooseUsCards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6rem;
+  padding: 0 6.313rem;
+}
+
+.cardContainer {
+  background: #ffffff;
+  box-shadow: 0px 10px 30px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  width: 22.063rem;
+  padding: 4.563rem 3.875rem;
+}
+
+.cardTitle {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.cardText {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
