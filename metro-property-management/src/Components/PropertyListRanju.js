@@ -3,7 +3,7 @@ import Navbar from './Navbar'
 import '../Styles/PropertyList.css'
 function PropertyListRanju() {
   const [properties, setProperty] = useState(null);
-  const [propertySortedList, setPropertySortedList] = useState([]);
+  const [propertySortedList, setPropertySortedList] = useState(null);
 
   useEffect(()=>{
     const fetchProperty = async()=>{
@@ -12,75 +12,45 @@ function PropertyListRanju() {
 
       if(response.ok){
         setProperty(json);
-        //setPropertySortedList(properties);
+      }
+      else{
+        console.log("reading error");
       }
     }
     fetchProperty()
   },[])
 
-  function updateList(){
-    console.log(properties);
-  }
-  function tocall(){
-    console.log("the sorted List");
-    setPropertySortedList(quickSort(properties));
-    console.log(quickSort(properties));
-  }
-  function quickSort(listToSort){
-    let sortedlist = [];
-    const length = listToSort.length;
-    let start = 1;
-    const pivot = 0;
-    if(listToSort.length<2){
-      setPropertySortedList(listToSort);
-      return;
-    }
-    const left = [];
-    const right = [];
-    while(start <= length-1){
-      if( listToSort[start].rate < listToSort[pivot].rate){
-        left.push(listToSort[start])
-      }
-      else{
-        right.push(listToSort[start])
-      }
-      start++;
-    }
-    let templeft = [...quickSort(left)];
-    let tempright = [...quickSort(right)];
-    sortedlist = [templeft, pivot, tempright];
-    return (sortedlist);
+  function ApplySort(){
+    const listSorted = quickSort(properties);
+    setPropertySortedList(listSorted);
   }
 
-  //Quicksort function
-  // function quickSort(numArray,length = numArray.length,start=1){
-  //   if(numArray.length < 2){
-  //       return numArray; // base case
-  //   }
-  //   //const pivot = numArray[numArray.length-1];
-  //   const pivot = numArray[0];
-  //   const left  = [];
-  //   const right = [];
-  //   while (start < length) {
-  //     if (numArray[start] < pivot){
-  //       left.push(numArray[start])
-  //     }
-  //     else {
-  //       right.push(numArray[start])
-  //     }
-  //     start++ //  incrementing start value
-  //   }
-  //   let sorted = [...quickSort(left), pivot, ...quickSort(right)];
-  //   return sorted;
-  // }
-  // console.log(quickSort([9,3,7,6,1,4,8,2,5]));
+  function quickSort(listToSort){
+    if(listToSort.length < 2){
+      return listToSort;
+    }
+    const pivot = listToSort[listToSort.length - 1];
+    let left = [];
+    let right = [];
+    let index = 0;
+    while(index < listToSort.length-1){
+      if( listToSort[index].rate > pivot.rate){
+        left.push(listToSort[index])
+      }
+      else{
+        right.push(listToSort[index])
+      }
+      index++;
+    }
+    const sortedlist = [...quickSort(left), pivot, ...quickSort(right)];
+    return (sortedlist);
+  }
 
   return (
     <div className='property-list'>
       <Navbar/>
       <h1>Property List</h1>
-      <button onClick={updateList}>Click Update</button>
-      <button onClick={tocall}>Click Sort</button>
+      <button onClick={ApplySort}>Click Sort</button>
       <table>
         <thead>
         <tr>
@@ -93,14 +63,14 @@ function PropertyListRanju() {
         </tr>
         </thead>
         <tbody>
-        {properties && properties.map((property) => (
-        <tr className="border-top" key = {property._id}>
-          <td> <p> {property.title} </p> </td>
-          <td> <p> {property.rate} </p> </td>
-          <td> <p> {property.bedrooms} </p> </td>
-          <td> <p> {property.bathrooms} </p> </td>
-          <td> <p> {property.city} </p> </td>
-          <td> <p> {property.pets} </p> </td>
+        {propertySortedList && propertySortedList.map((propertySortedList) => (
+        <tr className="border-top" key = {propertySortedList._id}>
+          <td> <p> {propertySortedList.title} </p> </td>
+          <td> <p> {propertySortedList.rate} </p> </td>
+          <td> <p> {propertySortedList.bedrooms} </p> </td>
+          <td> <p> {propertySortedList.bathrooms} </p> </td>
+          <td> <p> {propertySortedList.city} </p> </td>
+          <td> <p> {propertySortedList.pets} </p> </td>
         </tr>
         ))}
         </tbody>
