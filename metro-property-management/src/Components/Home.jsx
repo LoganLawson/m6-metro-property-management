@@ -6,6 +6,7 @@ import HeroSection from "./HeroSection/HeroSection";
 import TeamSection from "./TeamSection/TeamSection";
 import Footer from "./Footer/Footer";
 import styles from "./Home.module.css";
+import ContactSection from "./ContactSection/ContactSection";
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
       <Navbar />
       <HeroSection />
       <TeamSection />
+      <ContactSection />
       <div className={styles.container}>
         <h1>Quick Sort Demo</h1>
         <Link to="/Logan">
