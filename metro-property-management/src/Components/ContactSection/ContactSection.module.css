@@ -3,7 +3,7 @@
   background-image: url("../../images/homepage-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  mix-blend-mode: color-burn;
+  background-blend-mode: color-burn;
 
   padding-top: 10.875rem;
   padding-bottom: 10.875rem;
