@@ -6,8 +6,45 @@
   background-blend-mode: color-burn;
 
   padding-top: 8.875rem;
-  padding-bottom: 10.875rem;
+  padding-bottom: 55.813rem;
 
   font-family: "Montserrat";
   font-style: normal;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+
+  padding-top: 13.5rem;
+  padding-left: 8.375rem;
+  padding-right: 10.5rem;
+}
+
+.slideContainer {
+  display: flex;
+  gap: 2.514rem;
+}
+
+.slideContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: start;
+}
+
+.slideTitle {
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.slideName {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.slideText {
+  font-weight: 400;
+  font-size: 1.25rem;
 }
