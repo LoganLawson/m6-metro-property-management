@@ -8,6 +8,7 @@ import Footer from "./Footer/Footer";
 import styles from "./Home.module.css";
 import ContactSection from "./ContactSection/ContactSection";
 import ChooseUsSection from "./ChooseUsSection/ChooseUsSection";
+import TenantAppSection from "./TenantAppSection/TenantAppSection";
 
 function Home() {
   return (
@@ -15,6 +16,7 @@ function Home() {
       <Navbar />
       <HeroSection />
       <ChooseUsSection />
+      <TenantAppSection />
       <TeamSection />
       <ContactSection />
       <div className={styles.container}>
