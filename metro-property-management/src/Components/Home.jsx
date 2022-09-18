@@ -7,12 +7,14 @@ import TeamSection from "./TeamSection/TeamSection";
 import Footer from "./Footer/Footer";
 import styles from "./Home.module.css";
 import ContactSection from "./ContactSection/ContactSection";
+import ChooseUsSection from "./ChooseUsSection/ChooseUsSection";
 
 function Home() {
   return (
     <>
       <Navbar />
       <HeroSection />
+      <ChooseUsSection />
       <TeamSection />
       <ContactSection />
       <div className={styles.container}>
