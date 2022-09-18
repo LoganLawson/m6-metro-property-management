@@ -1,0 +1,13 @@
+.container {
+  background-color: rgba(243, 243, 243, 0.863);
+  background-image: url("../../images/homepage-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: color-burn;
+
+  padding-top: 8.875rem;
+  padding-bottom: 10.875rem;
+
+  font-family: "Montserrat";
+  font-style: normal;
+}
