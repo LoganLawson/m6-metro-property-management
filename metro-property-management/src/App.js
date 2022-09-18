@@ -4,6 +4,7 @@ import Home from './Components/Home'
 import LoganSort from './Components/LoganSort/LoganSort'
 import BrandonSort from './Components/BrandonSort'
 import RanjuSort from './Components/RanjuSort'
+import ApplicationForm from './Components/ApplicationForm';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
 				<Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/Home" element={<Home/>} />
+          <Route path="/ApplicationForm" element={<ApplicationForm/>} />
 					<Route path="/Logan" element={<LoganSort/>} />
 					<Route path="/Ranju" element={<RanjuSort/>} />
 					<Route path="/Brandon" element={<BrandonSort/>} />
