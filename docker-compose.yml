@@ -1,5 +1,5 @@
 version: "3.8"
-services: 
+services:
   react-app:
     image: react-app
     stdin_open: true
@@ -8,6 +8,10 @@ services:
     networks:
       - mern-app
     build: ./metro-property-management
+    volumes:
+      - ./metro-property-management/src:/frontend/src
+    environment:
+      - WATCHPACK_POLLING=true
   api-server:
     image: api-server
     ports:
@@ -22,7 +26,7 @@ services:
     ports:
       - "27017:27017"
     networks:
-      - mern-app  
+      - mern-app
     restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
