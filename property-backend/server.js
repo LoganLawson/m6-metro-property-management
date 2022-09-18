@@ -1,8 +1,8 @@
-const { MongoClient } = require("mongodb");
 const express = require("express");
-const { response } = require('express');
-const port = 3005
+var cors = require('cors')
+const { MongoClient } = require("mongodb");
 const app = express()
+const port = 3005
 
 const uri = "mongodb://root:example@localhost:27017";
 const options = { authSource: "admin" };
@@ -23,7 +23,7 @@ const retrieve = async (q) => {
 const router = express.Router();
 app.use('/properties', router);
 
-router.get('/', async (req, res) => {
+router.get('/', cors(), async (req, res) => {
   const properties = await retrieve(req.query);
   res.send(properties)
   })
