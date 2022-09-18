@@ -2,14 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import Navbar from "./Header/Navbar";
-import Footer from "./Footer/Footer";
+import HeroSection from "./HeroSection/HeroSection";
 import TeamSection from "./TeamSection/TeamSection";
+import Footer from "./Footer/Footer";
 import styles from "./Home.module.css";
 
 function Home() {
   return (
     <>
       <Navbar />
+      <HeroSection />
       <TeamSection />
       <div className={styles.container}>
         <h1>Quick Sort Demo</h1>
