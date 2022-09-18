@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  box-shadow: 0px 10px 30px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0rem 0.625rem 1.875rem 0.313rem rgba(0, 0, 0, 0.2);
 
   padding-top: 5em;
 }
