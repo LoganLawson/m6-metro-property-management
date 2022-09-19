@@ -29,7 +29,7 @@ function Home() {
           {" "}
           <h2>Brandon</h2>{" "}
         </Link>
-        <Link to="/Ranju">
+        <Link to="/properties">
           {" "}
           <h2>Ranju</h2>{" "}
         </Link>

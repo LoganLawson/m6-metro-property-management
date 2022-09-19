@@ -5,11 +5,8 @@ import LoganSort from './Components/LoganSort/LoganSort'
 import BrandonSort from './Components/BrandonSort'
 import PropertyListRanju from './Components/RanjuSort/PropertyListRanju';
 import ApplicationForm from './Components/ApplicationForm';
+import ListingTemp from './Components/ListingTemp';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ExerciseList from './Components/ExerciseList';
-import EditExercise from './Components/EditExercise';
-import CreateExercise from './Components/CreateExercise';
-import CreateUser from './Components/CreateUser';
 
 function App() {
   return (
@@ -20,13 +17,9 @@ function App() {
           <Route path="/Home" element={<Home/>} />
           <Route path="/ApplicationForm" element={<ApplicationForm/>} />
 					<Route path="/Logan" element={<LoganSort/>} />
-					<Route path="/Ranju" element={<PropertyListRanju/>} />
 					<Route path="/Brandon" element={<BrandonSort/>} />
-					<Route path="/exercisehome" element={<ExerciseList/>} />
-					<Route path="/edit/:id" element={<EditExercise/>} />
-					<Route path="/create" element={<CreateExercise/>} />
-					<Route path="/user" element={<CreateUser/>} />
 					<Route path="/properties" element={<PropertyListRanju/>} />
+					<Route path="/listingtemp" element={<ListingTemp/>} />
         </Routes>
       </Router>
     </div>
