@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from "./Application.module.css";
+import {Link} from "react-router-dom";
 //import styles from "../TenantAppSection/TenantAppSection.module.css";
 function Application() {
   return (
@@ -199,9 +200,11 @@ function Application() {
         <div className={styles.backButton}>
             <div className={styles.chevron}>
             </div>
-            <div >
-                Back
-            </div>
+            <Link to='/Home' className={styles.button}>
+                <div >
+                    Back
+                </div>
+            </Link>
         </div>
         <div className={styles.submitButton}>Submit</div>
         </div>
