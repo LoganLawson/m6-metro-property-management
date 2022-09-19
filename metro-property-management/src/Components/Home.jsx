@@ -15,6 +15,7 @@ function Home() {
   return (
     <>
       <Navbar />
+
       <HeroSection />
       <ChooseUsSection />
       <TenantAppSection />
