@@ -3,7 +3,7 @@ import "@fontsource/montserrat";
 import Home from './Components/Home'
 import LoganSort from './Components/LoganSort/LoganSort'
 import BrandonSort from './Components/BrandonSort'
-import RanjuSort from './Components/RanjuSort'
+import PropertyListRanju from './Components/RanjuSort/PropertyListRanju';
 import ApplicationForm from './Components/ApplicationForm';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
@@ -15,7 +15,7 @@ function App() {
           <Route path="/Home" element={<Home/>} />
           <Route path="/ApplicationForm" element={<ApplicationForm/>} />
 					<Route path="/Logan" element={<LoganSort/>} />
-					<Route path="/Ranju" element={<RanjuSort/>} />
+					<Route path="/Ranju" element={<PropertyListRanju/>} />
 					<Route path="/Brandon" element={<BrandonSort/>} />
         </Routes>
       </Router>
