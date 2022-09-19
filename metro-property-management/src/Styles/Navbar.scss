@@ -1,0 +1,17 @@
+@import '../Variables/Variables.scss';
+
+.navbar{
+    display: flex;
+    align-items: center;
+    background-color: cadetblue;
+    height: 50px;
+}
+.nav-link{
+    text-decoration: none;
+    color: black;
+}
+.navbar-list{
+    list-style: none;
+    display: flex;
+    gap: $navbarGaps;
+}
