@@ -8,7 +8,7 @@ const Carousel = () => {
   return (
     <div className={styles.carouselContainer}>
       <ul>
-        <li className={styles.slide}>
+        <li className={styles.slide} data-active>
           <CarouselContent
             slideImg={slideImg1}
             title="Sucess Stories"
