@@ -1,6 +1,6 @@
 .container {
     display: grid;
-    grid-template-columns: 10rem auto 10rem;
+    grid-template-columns: 15rem auto 15rem;
     grid-template-rows: 16vh 15vh auto auto auto;
     grid-template-areas: 
     "header header header"
@@ -18,11 +18,20 @@
     grid-area: main;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
         
     gap: 2rem;
     padding: 2rem;
 }
+/* .cards-section::after {
+    content: "";
+    flex: auto;
+} */
+.card {
+    width: 27rem;
+    height: 30rem;
+}
+
 .Footer {
     grid-area: footer;
 }

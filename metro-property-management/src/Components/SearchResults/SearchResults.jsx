@@ -1,16 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import styles from './LoganSort.module.css'
+import styles from './SearchResults.module.css'
 
-import PropertyCard from './PropertyCard'
+import PropertyCard from '../PropertyCard/PropertyCard'
 import quickSortArray from './quickSortArray.js'
 import Navbar from '../Header/Navbar';
+import SearchTags from './Searchtags/SearchTags';
 import Footer from '../Footer/Footer'
 
 const imsrc = 'https://stonewood.co.nz/wp-content/uploads/elementor/thumbs/Queenstown-Franchise-pp2wouxopkdjjz7op90pgmrjgqxcdm8jaa56lsuu8s.jpg'
 
-function LoganSort() {
+function SearchResults() {
+  const [searchTags, setSearchTags] = React.useState([])
   const [properties, setProperties] = React.useState([
     {
       _id: "63214eb65b3bfca33192297e",
@@ -33,7 +35,6 @@ function LoganSort() {
       title: "406/147-149 Victoria Street West City Centre (Auckland City), Auckland"
     }]);
   const [error, setError] = React.useState(null);
-  // const []
 
   React.useEffect(() => {
     axios.get('http://localhost:3005/properties/').then((response) => {
@@ -46,7 +47,9 @@ function LoganSort() {
   if (error) return `Error: ${error.message}`;
 
   const propertyCards = properties.map(property =>
-      <PropertyCard key={property._id} propertyData={property} imageSource={imsrc}/>
+      <div className={styles.card}>
+        <PropertyCard key={property._id} propertyData={property} imageSource={imsrc}/>
+      </div>
   );
 
   const sort = (e) => {
@@ -60,6 +63,7 @@ function LoganSort() {
   return (
     <>
     <Navbar />
+    <SearchTags className={styles['dark-tags']} tags={['sick', 'dope', 'really nice', 'house']}/>
     <div className={styles.container}>
         <h2>Quick Sort Logan</h2>
         <Link to='/Home'> <h6>home</h6> </Link>
@@ -67,12 +71,10 @@ function LoganSort() {
         <div className={styles['cards-section']}>
           {propertyCards}
         </div>
-        
-        <span>hello</span>
     </div>
     <Footer />
     </>
   )
 };
 
-export default LoganSort
+export default SearchResults
