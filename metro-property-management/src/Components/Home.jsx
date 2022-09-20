@@ -9,14 +9,17 @@ import styles from "./Home.module.css";
 import ContactSection from "./ContactSection/ContactSection";
 import ChooseUsSection from "./ChooseUsSection/ChooseUsSection";
 import TenantAppSection from "./TenantAppSection/TenantAppSection";
+import SucessSection from "./SucessSection/SucessSection";
 
 function Home() {
   return (
     <>
       <Navbar />
+
       <HeroSection />
       <ChooseUsSection />
       <TenantAppSection />
+      <SucessSection />
       <TeamSection />
       <ContactSection />
       <div className={styles.container}>
