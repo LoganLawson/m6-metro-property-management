@@ -1,0 +1,24 @@
+.amenitiesBox{
+    width: 15rem;
+    border-radius: 1em;
+    background-color: white;
+    padding:1.5em ;
+    text-align: left;
+    box-shadow: 0rem 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.1);
+}
+.heading{
+    font-weight: 700;
+    font-size: large;
+    margin-bottom: 1em;
+
+}
+.amenities{
+    display: flex;
+}
+.amenities input{
+    width: 1.5em;
+    margin-right: 1em;
+}
+.amenities label{
+    font-weight: 400;
+}

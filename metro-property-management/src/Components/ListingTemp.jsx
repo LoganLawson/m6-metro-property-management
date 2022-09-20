@@ -1,11 +1,11 @@
 import React from 'react'
-import GoogleMap from './GoogleMap/GoogleMap'
+import ListingMap from './GoogleMap/ListingMap'
 
 function ListingTemp() {
   return (
     <>
         <div>ListingTemp</div>
-        <GoogleMap/>
+        <ListingMap/>
     </>
   )
 }
