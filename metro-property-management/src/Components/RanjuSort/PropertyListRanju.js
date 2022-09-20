@@ -6,7 +6,7 @@ function PropertyListRanju() {
   const [properties, setProperty] = useState(propertySortedList);
 
   const getPropertyData = async () => {
-    const response = await fetch("http://localhost:5000/property" )
+    const response = await fetch("http://localhost:3005/properties" )
     .then((response) => response.json());
   
     // update the state

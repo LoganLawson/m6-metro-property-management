@@ -7,7 +7,7 @@ function PropertyListRanju() {
 
   useEffect(()=>{
     const fetchProperty = async()=>{
-      const response = await fetch('http://localhost:5000/property')
+      const response = await fetch('http://localhost:3005/properties')
       const json = await response.json()
 
       if(response.ok){

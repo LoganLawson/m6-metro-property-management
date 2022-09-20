@@ -1,7 +1,7 @@
 import './App.css';
 import "@fontsource/montserrat";
 import Home from './Components/Home'
-import LoganSort from './Components/LoganSort/LoganSort'
+import SearchResults from './Components/SearchResults/SearchResults'
 import BrandonSort from './Components/BrandonSort'
 import PropertyListRanju from './Components/RanjuSort/PropertyListRanju';
 import ApplicationForm from './Components/ApplicationForm';
@@ -16,7 +16,7 @@ function App() {
           <Route path="/" element={<Home/>} />
           <Route path="/Home" element={<Home/>} />
           <Route path="/ApplicationForm" element={<ApplicationForm/>} />
-					<Route path="/Logan" element={<LoganSort/>} />
+					<Route path="/SearchResults" element={<SearchResults/>} />
 					<Route path="/Brandon" element={<BrandonSort/>} />
 					<Route path="/properties" element={<PropertyListRanju/>} />
 					<Route path="/listingtemp" element={<ListingTemp/>} />
