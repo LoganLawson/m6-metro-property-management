@@ -1,7 +1,7 @@
 import './App.css';
 import "@fontsource/montserrat";
 import Home from './Components/Home'
-import SearchResults from './Components/SearchResults/SearchResults'
+import SearchResultsPage from './Components/SearchResults/SearchResultsPage'
 import BrandonSort from './Components/BrandonSort'
 import RanjuSort from './Components/RanjuSort'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -18,7 +18,7 @@ function App() {
 				<Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/Home" element={<Home/>} />
-					<Route path="/SearchResults" element={<SearchResults/>} />
+					<Route path="/SearchResults" element={<SearchResultsPage/>} />
 					<Route path="/Ranju" element={<RanjuSort/>} />
 					<Route path="/Brandon" element={<BrandonSort/>} />
 					<Route path="/exercisehome" element={<ExerciseList/>} />

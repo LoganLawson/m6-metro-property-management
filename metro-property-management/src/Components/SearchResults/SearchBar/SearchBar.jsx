@@ -20,7 +20,7 @@ function SearchBar(props) {
             <div className={styles['search-box']}>
                 <img id={styles['looking-glass']} src={lookingGlass} alt='search glyph' />
                 <SearchTags classname={styles['location-tags']} tags={props.locationTags} />
-                <textarea value={searchInput} onSubmit={handleChange} />
+                <textarea value={searchInput} onChange={handleChange} />
             </div>
             <div className={styles['save-search']}>
                 <span>Save Search</span>
