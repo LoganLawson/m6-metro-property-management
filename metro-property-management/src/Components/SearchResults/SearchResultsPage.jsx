@@ -6,6 +6,7 @@ import styles from './SearchResultsPage.module.css'
 
 import quickSortArray from './quickSortArray.js'
 import Navbar from '../Header/Navbar';
+import Breadcrumbs from '../BreadCrumbs/BreadCrumbs';
 import SearchTags from './Searchtags/SearchTags';
 import SearchBar from './SearchBar/SearchBar';
 import SearchResultsSection from './SearchResultsSection/SearchResultsSection'
@@ -53,6 +54,7 @@ function SearchResults() {
       <div className={styles['header']}>
         <Navbar />
       </div>
+      <Breadcrumbs />
       <div className={styles['search']}>
         <SearchBar locationTags={['Auckland']} />
         <SearchTags className={styles['dark-tags']} tags={['sick', 'dope', 'really nice', 'house']} />
@@ -83,7 +85,6 @@ function SearchResults() {
         disabledClassName={styles["pagination__link--disabled"]}
         activeClassName={styles["pagination__link--active"]}
       />
-      <div className={styles['results-2']}>section</div>
       <div className={styles['footer']}>
         <Footer />
       </div>

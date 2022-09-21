@@ -1,24 +1,24 @@
 :root {
     --section-padding: 4rem 12rem;
-  }
+}
 
 .container {
     display: grid;
     grid-template-columns: 15rem 1fr 15rem;
     grid-template-rows: auto auto auto auto auto auto;
-    grid-template-areas: 
-    "header header header"
-    ". search ."
-    ". results-1 ."
-    ". nearby ."
-    ". results-2 ."
-    "footer footer footer"
+    grid-template-areas:
+        "header header header"
+        ". search ."
+        ". results-1 ."
+        ". nearby ."
+        ". results-2 ."
+        "footer footer footer"
     ;
 }
 
 
-.header {
-}
+.header {}
+
 .search {
     grid-area: search;
     box-sizing: border-box;
@@ -27,22 +27,27 @@
     gap: 1.5rem;
     padding: var(--section-padding);
 }
+
 .results-1 {
     display: flex;
     flex-direction: column;
     padding: var(--section-padding);
     gap: 1rem;
 }
+
 .nearby {
-    background: #F2F2F2;
+    background-color: rgba(243, 243, 243, 0.863);
+    background-image: url("../../images/homepage-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: color-burn;
+
     display: flex;
     flex-direction: column;
     padding: var(--section-padding);
     gap: 1rem;
 }
-.results-2 {
-    background: brown;
-}
+
 .footer {
     background: yellow;
 }
@@ -57,6 +62,7 @@
     padding: 5rem;
 
 }
+
 .pagination span {
     font-size: 1.5rem;
     font-weight: 700;
@@ -64,12 +70,14 @@
     color: #2F2E41;
     padding: 0 2rem 0 0;
 }
+
 .pagination__link--numbers {
     font-size: 1.5rem;
     font-weight: 700;
     font-family: "Montserrat";
     color: #2F2E41;
 }
+
 .pagination__link--active {
     display: flex;
     justify-content: center;
@@ -80,6 +88,7 @@
     height: 3rem;
     background: #2F2E41;
 }
+
 .pagination__link--active a {
     font-size: 1.5rem;
     font-weight: 700;
