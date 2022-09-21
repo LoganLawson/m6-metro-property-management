@@ -1,11 +1,12 @@
 import React from 'react'
 import ListingMap from './GoogleMap/ListingMap'
+import PropertyMap from './GoogleMap/PropertyMap'
 
 function ListingTemp() {
   return (
     <>
-        <div>ListingTemp</div>
-        <ListingMap/>
+        <PropertyMap/>
+        {/* <ListingMap/> */}
     </>
   )
 }
