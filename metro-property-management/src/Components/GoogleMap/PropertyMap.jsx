@@ -6,7 +6,7 @@ import Map from './Map';
 function PropertyMap() {
     const {isLoaded} = useJsApiLoader({
         id:mapOptions.googleMapApiKey,
-        // googleMapsApiKey: mapOptions.googleMapApiKey
+        // googleMapsApiKey: mapOptions.googleMapApiKey,
         googleMapsApiKey:"AIzaSyD4hBbwulv5gx7S83sLQ1MzMkIpP-AVrv0"
     })
     return (

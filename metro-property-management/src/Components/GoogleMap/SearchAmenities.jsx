@@ -13,15 +13,15 @@ function SearchAmenities() {
   return (
     <div className={styles.amenitiesBox}>
         <div className={styles.heading}>SearchAmenities</div>
-        <div className={styles.amenities}> <input type="radio" id="publicTransport" name="tp" value="pt" checked></input><label>Public Transport</label><img src={transportlogo} alt="dine" /> </div>
-        <div className={styles.amenities}> <input type="radio" id="publicTransport" name="tp" value="pt" checked></input><label>Schools</label> </div>
-        <div className={styles.amenities}> <input type="radio" id="publicTransport" name="tp" value="pt" checked></input><label>Eateries</label> <img src={dinelogo} alt="dine" /></div>
-        <div className={styles.amenities}> <input type="radio" id="publicTransport" name="tp" value="pt" checked></input><label>Gyms</label><img src={gymlogo} alt="dine" /> </div>
-        <div className={styles.amenities}> <input type="radio" id="publicTransport" name="tp" value="pt" checked></input><label>Parks</label><img src={parkslogo} alt="dine" /> </div>
-        <div className={styles.amenities}> <input type="radio" id="publicTransport" name="tp" value="pt" checked></input><label>Super Markets</label><img src={supermarketlogo} alt="dine" /> </div>
-        <div className={styles.amenities}> <input type="radio" id="publicTransport" name="tp" value="pt" checked></input><label>Airports</label><img src={airportlogo} alt="dine" /> </div>
-        <div className={styles.amenities}> <input type="radio" id="publicTransport" name="tp" value="pt" checked></input><label>Hospitals</label><img src={hospitallogo} alt="dine" /> </div>
-        <div className={styles.amenities}> <input type="radio" id="publicTransport" name="tp" value="pt" checked></input><label>Churches</label><img src={churchlogo} alt="dine" /> </div>
+        <div className={styles.amenities}> <input type="radio" id="publicTransport" name="tp" value="pt" ></input><label>Public Transport</label><img src={transportlogo} alt="dine" /> </div>
+        <div className={styles.amenities}> <input type="radio" id="publicTransport" name="tp" value="pt" ></input><label>Schools</label> </div>
+        <div className={styles.amenities}> <input type="radio" id="publicTransport" name="tp" value="pt" ></input><label>Eateries</label> <img src={dinelogo} alt="dine" /></div>
+        <div className={styles.amenities}> <input type="radio" id="publicTransport" name="tp" value="pt" ></input><label>Gyms</label><img src={gymlogo} alt="dine" /> </div>
+        <div className={styles.amenities}> <input type="radio" id="publicTransport" name="tp" value="pt" ></input><label>Parks</label><img src={parkslogo} alt="dine" /> </div>
+        <div className={styles.amenities}> <input type="radio" id="publicTransport" name="tp" value="pt" ></input><label>Super Markets</label><img src={supermarketlogo} alt="dine" /> </div>
+        <div className={styles.amenities}> <input type="radio" id="publicTransport" name="tp" value="pt" ></input><label>Airports</label><img src={airportlogo} alt="dine" /> </div>
+        <div className={styles.amenities}> <input type="radio" id="publicTransport" name="tp" value="pt" ></input><label>Hospitals</label><img src={hospitallogo} alt="dine" /> </div>
+        <div className={styles.amenities}> <input type="radio" id="publicTransport" name="tp" value="pt" ></input><label>Churches</label><img src={churchlogo} alt="dine" /> </div>
     </div>
   )
 }
