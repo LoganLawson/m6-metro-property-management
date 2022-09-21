@@ -5,7 +5,7 @@ import SearchResults from './Components/SearchResults/SearchResults'
 import BrandonSort from './Components/BrandonSort'
 import PropertyListRanju from './Components/RanjuSort/PropertyListRanju';
 import ApplicationForm from './Components/ApplicationForm';
-import ListingTemp from './Components/ListingTemp';
+import GoogleMapTemp from './Components/GoogleMapTemp';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
 					<Route path="/SearchResults" element={<SearchResults/>} />
 					<Route path="/Brandon" element={<BrandonSort/>} />
 					<Route path="/properties" element={<PropertyListRanju/>} />
-					<Route path="/listingtemp" element={<ListingTemp/>} />
+					<Route path="/googlemaptemp" element={<GoogleMapTemp/>} />
         </Routes>
       </Router>
     </div>

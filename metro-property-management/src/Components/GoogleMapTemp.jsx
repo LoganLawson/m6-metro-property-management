@@ -1,14 +1,12 @@
 import React from 'react'
-import ListingMap from './GoogleMap/ListingMap'
 import PropertyMap from './GoogleMap/PropertyMap'
 
-function ListingTemp() {
+function GoogleMapTemp() {
   return (
     <>
         <PropertyMap/>
-        {/* <ListingMap/> */}
     </>
   )
 }
 
-export default ListingTemp
+export default GoogleMapTemp

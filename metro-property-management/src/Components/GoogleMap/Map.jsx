@@ -4,6 +4,7 @@ import DineMarker from './map-images/dine.png';
 import ParkMarker from './map-images/parks.png';
 import SupermarketMarker from './map-images/supermarket.png';
 import FuelMarker from './map-images/fuel.png';
+import TransportMarker from './map-images/transport.png';
 import styles from './Map.module.css';
 import { mapOptions } from "./MapConfiguration";
 import SearchAmenities from './SearchAmenities';
@@ -30,42 +31,46 @@ const Map = (props) => {
             name:"location-1",
             status:"park",
             location:{
-                lat:-36.846203951976854, 
-                lng: 174.76270906013056
+                lat: -36.84657964705621, 
+                lng: 174.77074822711825 
             }
         },
         {
             name:"location-2",
             status: "fuel",
             location:{
-                lat:-36.843714101132186,
-                lng: 174.76424332394768
+                lat: -36.84632334757248, 
+                lng: 174.77175190652804
             }
         },
         {
             name:"location-3",
             status:"supermarket",
             location:{
-                lat:-36.846470132427555, 
-                lng: 174.76642125759273
+                lat: -36.84614375822328,  
+                lng: 174.77089821686965
+            }
+        },
+        {
+            name:"location-4",
+            status:"dine",
+            location:{
+                lat: -36.84623219981439, 
+                lng: 174.7714925286457
+            }
+        },
+        {
+            name:"location-5",
+            status:"transport",
+            location:{
+                lat: -36.84646232619055, 
+                lng: 174.77184212592132
             }
         },
     ]
-    const waterStyle = [
-        {
-            featureType:"water",
-            elementType: "geometry.fill",
-            stylers: [
-                {
-                    color: "#dbe2d2",
-                },
-            ],
-        },
-    ];
     return (isLoaded && (
         <div className={styles.googleMapContainer}>
             <GoogleMap 
-            // mapContainerStyle={containerStyle}
             mapContainerClassName={styles.mapContainer} 
             center={center} 
             zoom={20}
@@ -97,7 +102,11 @@ const Map = (props) => {
                                 :marker.status === "fuel" 
                                 ? FuelMarker
                                 :marker.status === "supermarket" 
-                                ? SupermarketMarker:"" ,
+                                ? SupermarketMarker
+                                :marker.status === "dine"
+                                ? DineMarker 
+                                :marker.status === "transport"
+                                ? TransportMarker: "" ,
                             }}
                             onClick={()=>{
                                 setSelectedMarker(marker);

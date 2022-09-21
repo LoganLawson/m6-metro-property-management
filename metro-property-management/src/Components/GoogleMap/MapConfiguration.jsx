@@ -38,6 +38,15 @@ const MAP_THEME = [
         ]
     },
     {
+        "featureType": "transit",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
         "featureType": "road.highway",
         "elementType": "all",
         "stylers": [
