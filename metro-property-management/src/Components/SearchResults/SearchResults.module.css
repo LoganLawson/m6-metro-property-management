@@ -1,37 +1,67 @@
+:root {
+    --section-padding: 4rem 10rem;
+  }
+
 .container {
     display: grid;
-    grid-template-columns: 15rem auto 15rem;
-    grid-template-rows: 16vh 15vh auto auto auto;
+    grid-template-columns: 15rem 1fr 15rem;
+    grid-template-rows: auto auto auto auto auto auto;
     grid-template-areas: 
     "header header header"
-    "search search search"
-    ". main ."
-    "banner banner banner"
+    ". search ."
+    ". results-1 ."
+    ". nearby ."
+    ". results-2 ."
     "footer footer footer"
     ;
 }
 
-.Navbar {
-    grid-area: header;
+
+.header {
 }
-.cards-section {
-    grid-area: main;
+.search {
+    grid-area: search;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: var(--section-padding);
+}
+.results-1 {
+    display: flex;
+    flex-direction: column;
+    padding: var(--section-padding);
+    gap: 1rem;
+}
+.results-1 span {
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 0 0 3rem 0;
+}
+.result-options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.property-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-        
-    gap: 2rem;
-    padding: 2rem;
+    justify-content: space-between;
+    align-content: flex-start;
+    gap: 3.5rem;
+    /* padding: var(--section-padding); */
 }
-/* .cards-section::after {
-    content: "";
-    flex: auto;
-} */
 .card {
     width: 27rem;
     height: 30rem;
 }
-
-.Footer {
-    grid-area: footer;
+.nearby {
+    background: black;
+}
+.results-2 {
+    background: brown;
+}
+.footer {
+    background: yellow;
 }

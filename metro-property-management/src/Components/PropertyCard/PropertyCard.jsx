@@ -6,10 +6,11 @@ import carGlyph from '../../images/car.svg'
 
 function PropertyCard(props) {
 
+  // console.log(typeof JSON.parse(props.propertyData.imglinks))
   return (
     <div className={styles.container}>
       <div className={styles['image-section']}>
-        <img src={props.imageSource} alt='image of property'/>
+        <img src={props.propertyData.imglinks[0]} alt='image of property'/>
       </div>
       <div className={styles['info-section']}>
         <span className={styles.title}>{props.propertyData.title}</span>

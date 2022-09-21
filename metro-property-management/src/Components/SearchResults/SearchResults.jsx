@@ -7,9 +7,8 @@ import PropertyCard from '../PropertyCard/PropertyCard'
 import quickSortArray from './quickSortArray.js'
 import Navbar from '../Header/Navbar';
 import SearchTags from './Searchtags/SearchTags';
+import SearchBar from './SearchBar/SearchBar';
 import Footer from '../Footer/Footer'
-
-const imsrc = 'https://stonewood.co.nz/wp-content/uploads/elementor/thumbs/Queenstown-Franchise-pp2wouxopkdjjz7op90pgmrjgqxcdm8jaa56lsuu8s.jpg'
 
 function SearchResults() {
   const [searchTags, setSearchTags] = React.useState([])
@@ -32,7 +31,8 @@ function SearchResults() {
       region: "Auckland",
       street: "Victoria Street West",
       street_number: "406/147",
-      title: "406/147-149 Victoria Street West City Centre (Auckland City), Auckland"
+      title: "406/147-149 Victoria Street West City Centre (Auckland City), Auckland",
+      imglinks: ['https://stonewood.co.nz/wp-content/uploads/elementor/thumbs/Queenstown-Franchise-pp2wouxopkdjjz7op90pgmrjgqxcdm8jaa56lsuu8s.jpg']
     }]);
   const [error, setError] = React.useState(null);
 
@@ -48,7 +48,7 @@ function SearchResults() {
 
   const propertyCards = properties.map(property =>
       <div className={styles.card}>
-        <PropertyCard key={property._id} propertyData={property} imageSource={imsrc}/>
+        <PropertyCard key={property._id} propertyData={property}/>
       </div>
   );
 
@@ -62,17 +62,26 @@ function SearchResults() {
 
   return (
     <>
+    <div className={styles['header']}>
     <Navbar />
-    <SearchTags className={styles['dark-tags']} tags={['sick', 'dope', 'really nice', 'house']}/>
-    <div className={styles.container}>
-        <h2>Quick Sort Logan</h2>
-        <Link to='/Home'> <h6>home</h6> </Link>
-        <button onClick={sort}>sort</button>
-        <div className={styles['cards-section']}>
-          {propertyCards}
-        </div>
     </div>
-    <Footer />
+    <div className={styles['search']}>
+      <SearchBar locationTags={['Auckland']}/>
+      <SearchTags className={styles['dark-tags']} tags={['sick', 'dope', 'really nice', 'house']}/>
+    </div>
+    <div className={styles['results-1']}>
+      <span> We found {propertyCards.length} results for you</span>
+      <div className={styles['result-options']}>
+        <div>Sort by:</div>
+        <div>Show map</div>
+      </div>
+      <div className={styles['property-cards']}>{propertyCards}</div>
+    </div>
+    <div className={styles['nearby']}>section</div>
+    <div className={styles['results-2']}>section</div>
+    <div className={styles['footer']}>
+      <Footer />
+    </div>
     </>
   )
 };
