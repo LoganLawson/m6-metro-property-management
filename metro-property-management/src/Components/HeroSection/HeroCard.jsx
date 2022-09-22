@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const HeroCard = ({ title, text }) => {
   return (
     <Link
-      to="/SearchResults"
+      to="/tenants/rentals"
       className={styles.heroCards}
       style={{ color: "white" }}
     >

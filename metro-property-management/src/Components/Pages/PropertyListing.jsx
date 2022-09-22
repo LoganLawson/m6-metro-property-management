@@ -17,6 +17,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
+import PropertyMap from "../GoogleMap/PropertyMap";
 
 const PropertyListing = () => {
   const { propertyId } = useParams();
@@ -131,10 +132,16 @@ const PropertyListing = () => {
                     >
                       Apply Now
                     </Link>
-                    <div className={styles.button}>Search Rentals</div>
+                    <div className={styles.button}>Book a Viewing</div>
                   </div>
                 </div>
               </div>
+            </div>
+            <div className={styles.propertyMapContainer}>
+              <div className={styles.mapTitle}>
+                <h5>About the area</h5>
+              </div>
+              <PropertyMap />
             </div>
           </div>
         </PropertyCard>

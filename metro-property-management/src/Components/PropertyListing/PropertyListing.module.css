@@ -102,6 +102,21 @@
   margin-top: 1.688rem;
 }
 
+.propertyMapContainer {
+  margin-top: 4.688rem;
+  max-width: 81.438rem;
+  height: 44.5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mapTitle {
+  text-align: start;
+  font-weight: 600;
+  font-size: 32px;
+}
+
 @media only screen and (min-width: 2000px) {
   .container {
     width: 55%;

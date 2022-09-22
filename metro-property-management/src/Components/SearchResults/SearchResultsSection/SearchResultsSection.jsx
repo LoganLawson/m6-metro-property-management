@@ -5,6 +5,7 @@ import dropdownStyles from './Dropdown.module.js'
 
 import downCaret from '../../../images/down-caret-dark.svg';
 import Select from 'react-select'
+import ToggleButton from 'react-toggle-button'
 
 import PropertyCard from '../../PropertyCard/PropertyCard';
 
@@ -13,7 +14,6 @@ function SearchResultsSection(props) {
   const items = props.properties;
   const itemsPerPage = props.itemsPerPage;
   const itemOffset = props.itemOffset;
-
 
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;
@@ -35,11 +35,6 @@ function SearchResultsSection(props) {
     { label: 'Rate', value: 'rate' },
   ];
 
-  function handleChange(e) {
-    console.log(e)
-    props.onSortOptionChange(e)
-  }
-
   return (
     <>
       <div className={styles['results-1']}>
@@ -51,11 +46,17 @@ function SearchResultsSection(props) {
               styles={dropdownStyles} 
               name={props.sortOption} 
               options={sortOptions} 
-              onChange={handleChange}
+              onChange={props.onSortOptionChange}
               isSearchable={0}
               />
           </div>
-          <div>Show map</div>
+          <div id={styles['show-map']}>
+            <span>Sow Amenity Map</span>
+            <ToggleButton
+              value={props.isMapOpen}
+              onToggle={props.onMapToggle}
+                />
+          </div>
         </div>
         <div className={styles['property-cards']}>{propertyCards}</div>
       </div>

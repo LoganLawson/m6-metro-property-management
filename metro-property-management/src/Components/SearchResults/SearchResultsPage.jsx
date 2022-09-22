@@ -5,7 +5,8 @@ import axios from 'axios';
 import styles from './SearchResultsPage.module.css'
 
 // import quickSortArray from './quickSortArray.js'
-import qsRanju from './qsRanju.js'
+// import qsRanju from './qsRanju.js'
+import qsRanju from './quickSort'
 import Navbar from '../Header/Navbar';
 import Breadcrumbs from '../BreadCrumbs/BreadCrumbs';
 import SearchTags from './Searchtags/SearchTags';
@@ -21,9 +22,13 @@ function SearchResults() {
   const [searchTags, setSearchTags] = useState([])
   const [properties, setProperties] = useState([])
   const [error, setError] = useState(null);
+
   const [sortTarget, setSortTarget] = useState('title')
+
   const [itemOffset, setItemOffset] = useState(0);
   const [pageCount, setPageCount] = useState(0);
+
+  const [isMapOpen, setIsMapOpen] = useState(false);
 
   // get data
   useEffect(() => {
@@ -46,11 +51,16 @@ function SearchResults() {
 
   // sort dropdown
   const handleSortOptionClick = (e) => {
-    // e.preventDefault()
     console.log(`sort by: ${e.value}`)
-    setSortTarget(e.value)
-    const sorted = qsRanju(properties, sortTarget)
+    console.log('properties', properties)
+    const sorted = qsRanju(properties, e.value)
     setProperties(sorted)
+    setItemOffset(0);
+  }
+
+  // toggle map
+  const handleMapToggle = (e) => {
+    setIsMapOpen(!isMapOpen)
   }
 
   return (
@@ -71,6 +81,8 @@ function SearchResults() {
           itemOffset={itemOffset}
           sortOption={sortTarget}
           onSortOptionChange={handleSortOptionClick}
+          isMapOpen={isMapOpen}
+          onMapToggle={handleMapToggle}
           />
       </div>
       <div className={styles['nearby']}>
