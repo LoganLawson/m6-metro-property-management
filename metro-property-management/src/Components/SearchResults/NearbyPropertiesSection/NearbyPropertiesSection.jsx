@@ -5,7 +5,6 @@ import axios from 'axios';
 import styles from './NearbyPropertiesSection.module.css'
 
 import PropertyCard from '../../PropertyCard/PropertyCard'
-import quickSortArray from '../quickSortArray.js'
 
 import leftCaret from '../../../images/left-caret.svg'
 import rightCaret from '../../../images/right-caret.svg'

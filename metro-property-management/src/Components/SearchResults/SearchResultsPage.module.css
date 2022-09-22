@@ -1,23 +1,7 @@
+
 :root {
     --section-padding: 4rem 12rem;
 }
-
-.container {
-    display: grid;
-    grid-template-columns: 15rem 1fr 15rem;
-    grid-template-rows: auto auto auto auto auto auto;
-    grid-template-areas:
-        "header header header"
-        ". search ."
-        ". results-1 ."
-        ". nearby ."
-        ". results-2 ."
-        "footer footer footer"
-    ;
-}
-
-
-.header {}
 
 .search {
     grid-area: search;
