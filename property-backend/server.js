@@ -3,9 +3,9 @@ var cors = require("cors");
 const { MongoClient } = require("mongodb");
 const app = express();
 const port = 3005;
+require("dotenv").config();
 
-const uri =
-  "mongodb+srv://root:missionready@cluster0.gm3afvu.mongodb.net/?retryWrites=true&w=majority";
+const uri = process.env.MONGODB_CONNECTION;
 const options = { authSource: "admin" };
 const client = new MongoClient(uri, options);
 
