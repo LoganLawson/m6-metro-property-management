@@ -37,11 +37,7 @@
   display: flex;
   justify-content: center;
   gap: 5.938rem;
-
   flex-wrap: wrap;
-
-  max-width: 100%;
-
   padding-top: 4.25rem;
 }
 
@@ -53,18 +49,7 @@
   font-style: normal;
 }
 
-.phone {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.938em;
-}
-
-.email {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.938em;
-}
-.linkedin {
+.infoDetails {
   display: flex;
   flex-wrap: wrap;
   gap: 0.938em;
@@ -73,7 +58,7 @@
 .appraisalContainer {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .button {
@@ -85,4 +70,9 @@
   font-size: 1.5rem;
 
   padding: 1.25rem;
+}
+
+.infoContainer {
+  display: flex;
+  gap: 8.375rem;
 }

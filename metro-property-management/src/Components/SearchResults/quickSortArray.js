@@ -15,6 +15,8 @@ const reorder = (sorted, unsorted, target) => {
         }
         i++;
     }
+    console.log('sorted', sorted)
+    console.log('order', order)
 
     const ordered = [];
     i = 0;
@@ -45,6 +47,7 @@ const quickSortArray = (arr, target) => {
     const toSort = arr.map((x) => x[target]);
     const sorted = quickSort(toSort);
     const reordered = reorder(sorted, arr, target);
+    console.log('sorted outside', sorted)
     return reordered
 };
 

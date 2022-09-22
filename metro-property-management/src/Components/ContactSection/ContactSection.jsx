@@ -14,7 +14,11 @@ const ContactSection = () => {
               back to you shortly.
             </p>
           </div>
-          <img src={contactEnvelope} alt="envelope-large" />
+          <img
+            src={contactEnvelope}
+            alt="envelope-large"
+            className={styles.contactEnvelope}
+          />
         </div>
         <div className={styles.rightContent}>
           <div className={styles.formContainer}>
