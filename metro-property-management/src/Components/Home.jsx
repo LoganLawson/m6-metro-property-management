@@ -1,6 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
 import Navbar from "./Header/Navbar";
 import HeroSection from "./HeroSection/HeroSection";
 import TeamSection from "./TeamSection/TeamSection";
