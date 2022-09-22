@@ -23,7 +23,10 @@
 .buttonContainer {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  max-width: 104.267rem;
+  margin: 0 auto;
+  padding-right: 9.344rem;
 }
 
 .buttonGroup {
@@ -39,7 +42,12 @@
   font-weight: 600;
   font-size: 1.5rem;
 
-  padding: 1.25rem;
+  padding: 1.25rem 0;
+  width: 16.188rem;
+}
+
+.button:hover {
+  background-color: #f2f2f2;
 }
 
 .secondaryButton {
@@ -50,6 +58,10 @@
 
   font-weight: 600;
   font-size: 1.5rem;
+  width: 16.188rem;
+  padding: 1.25rem 0;
+}
 
-  padding: 1.25rem;
+.secondaryButton:hover {
+  background-color: #575a89;
 }

@@ -15,9 +15,16 @@ const TenantAppSection = () => {
       <div className={styles.buttonContainer}>
         <img src={teamArrow} alt="arrow" />
         <div className={styles.buttonGroup}>
-          <div className={styles.secondaryButton}>Search Rentals</div>
-          {/* <div className={styles.button}>Apply Now</div> */}
-          <Link to='/ApplicationForm' className={styles.button}>Apply Now</Link>
+          <Link
+            to="/SearchResults"
+            className={styles.secondaryButton}
+            style={{ color: "white" }}
+          >
+            Search Rentals
+          </Link>
+          <Link to="/ApplicationForm" className={styles.button}>
+            Apply Now
+          </Link>
         </div>
       </div>
     </div>
