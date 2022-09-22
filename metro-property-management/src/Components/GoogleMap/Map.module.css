@@ -21,6 +21,7 @@ button.gm-ui{
     width: 80rem;
     height: 40rem;
     border-radius: 1rem;
+    box-shadow: 0rem 0.625rem 1.875rem 0.313rem rgba(0, 0, 0, 0.2);
 }
 .googleMapContainer{
     position: absolute;
