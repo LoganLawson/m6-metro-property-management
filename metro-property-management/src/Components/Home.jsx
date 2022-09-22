@@ -5,10 +5,11 @@ import Navbar from "./Header/Navbar";
 import HeroSection from "./HeroSection/HeroSection";
 import TeamSection from "./TeamSection/TeamSection";
 import Footer from "./Footer/Footer";
-import styles from "./Home.module.css";
 import ContactSection from "./ContactSection/ContactSection";
 import ChooseUsSection from "./ChooseUsSection/ChooseUsSection";
 import TenantAppSection from "./TenantAppSection/TenantAppSection";
+import SucessSection from "./SucessSection/SucessSection";
+import styles from "./Home.module.css";
 
 function Home() {
   return (
@@ -17,6 +18,7 @@ function Home() {
       <HeroSection />
       <ChooseUsSection />
       <TenantAppSection />
+      <SucessSection />
       <TeamSection />
       <ContactSection />
       <div className={styles.container}>

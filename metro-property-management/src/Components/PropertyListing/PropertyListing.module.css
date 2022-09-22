@@ -1,0 +1,115 @@
+.container {
+  width: 78%;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  margin-bottom: 6.875rem;
+}
+
+.wrapper {
+  padding: 3.438rem;
+}
+
+.largeIcon {
+  width: 100%;
+  max-height: 44.438rem;
+}
+
+.smallIcons {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2.25rem;
+  flex-wrap: wrap;
+}
+
+.smallImg {
+  max-width: 19%;
+}
+
+.propertyContainer {
+  padding-top: 3.456rem;
+  text-align: start;
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.propertyTitle {
+  font-weight: 600;
+  font-size: 2.5em;
+}
+
+.heartCheck {
+  width: 2rem;
+  height: auto;
+}
+
+.propertyDetails {
+  display: flex;
+  justify-content: space-between;
+  gap: 4.5rem;
+}
+
+.info-banner {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.propertyDetailsRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+
+.propertyInfo {
+  font-weight: 400;
+  font-size: 1.375rem;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.063rem;
+  margin-top: 10.125rem;
+}
+
+.button {
+  background: #ffffff;
+  border: 0.125rem solid #2f2e41;
+  border-radius: 1.25rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding: 1.25rem;
+  text-align: center;
+  width: 50%;
+}
+
+.secondaryButton {
+  background: #2f2e41;
+  border: 0.125rem solid #2f2e41;
+  border-radius: 1.25rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding: 1.25rem;
+  text-align: center;
+  width: 50%;
+}
+
+.listingText {
+  margin-top: 1.688rem;
+}
+
+@media only screen and (min-width: 2000px) {
+  .container {
+    width: 55%;
+  }
+}
+
+@media only screen and (min-width: 3500px) {
+  .container {
+    width: 37%;
+  }
+}

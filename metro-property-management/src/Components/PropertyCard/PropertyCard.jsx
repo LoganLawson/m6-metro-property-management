@@ -4,12 +4,14 @@ import bedGlyph from '../../images/bed.svg'
 import bathGlyph from '../../images/bath.svg'
 import carGlyph from '../../images/car.svg'
 
+const imsrc = 'https://s.oneroof.co.nz/image/55/0b/550bd7407b8c6e767e84b27c3645a4f8.jpg'
 function PropertyCard(props) {
 
+  // console.log(typeof JSON.parse(props.propertyData.imglinks))
   return (
     <div className={styles.container}>
       <div className={styles['image-section']}>
-        <img src={props.imageSource} alt='image of property'/>
+        <img src={imsrc} alt='image of property'/>
       </div>
       <div className={styles['info-section']}>
         <span className={styles.title}>{props.propertyData.title}</span>
