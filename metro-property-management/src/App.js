@@ -1,6 +1,6 @@
 import "./App.css";
 import "@fontsource/montserrat";
-import Home from "./Components/Pages/Home";
+import Home from "./Components/Home";
 import SearchResultsPage from "./Components/SearchResults/SearchResultsPage";
 import BrandonSort from "./Components/BrandonSort";
 import PropertyListRanju from "./Components/RanjuSort/PropertyListRanju";
