@@ -16,7 +16,7 @@ const TenantAppSection = () => {
         <img src={teamArrow} alt="arrow" />
         <div className={styles.buttonGroup}>
           <Link
-            to="/SearchResults"
+            to="/tenants/rentals"
             className={styles.secondaryButton}
             style={{ color: "white" }}
           >
