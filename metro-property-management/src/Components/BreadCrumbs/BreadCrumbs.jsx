@@ -5,7 +5,6 @@ import rightCaret from '../../images/right-caret.svg'
 
 const Breadcrumbs = () => {
     const breadcrumbs = useBreadcrumbs();
-    console.log('crumbs', breadcrumbs[breadcrumbs.length-1])
     return (
       <div className={styles.container}>
         {breadcrumbs.slice(0,-1).map(({breadcrumb}) => 

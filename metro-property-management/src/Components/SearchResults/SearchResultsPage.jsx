@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactPaginate from 'react-paginate';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import styles from './SearchResultsPage.module.css'
 
-import quickSortArray from './quickSortArray.js'
+// import quickSortArray from './quickSortArray.js'
+import qsRanju from './qsRanju.js'
 import Navbar from '../Header/Navbar';
 import Breadcrumbs from '../BreadCrumbs/BreadCrumbs';
 import SearchTags from './Searchtags/SearchTags';
@@ -17,21 +18,15 @@ import leftCaret from '../../images/left-caret.svg'
 import rightCaret from '../../images/right-caret.svg'
 
 function SearchResults() {
-  const [searchTags, setSearchTags] = React.useState([])
-  const [properties, setProperties] = React.useState([])
-  const [error, setError] = React.useState(null);
+  const [searchTags, setSearchTags] = useState([])
+  const [properties, setProperties] = useState([])
+  const [error, setError] = useState(null);
+  const [sortTarget, setSortTarget] = useState('title')
   const [itemOffset, setItemOffset] = useState(0);
   const [pageCount, setPageCount] = useState(0);
 
-  // Invoke when user click to request another page.
-  const itemsPerPage = 9
-  const handlePageClick = (event) => {
-    const newOffset = event.selected * itemsPerPage % properties.length;
-    console.log(`User requested page number ${event.selected}, which is offset ${newOffset}`);
-    setItemOffset(newOffset);
-  };
-
-  React.useEffect(() => {
+  // get data
+  useEffect(() => {
     axios.get('http://localhost:3005/properties/').then((response) => {
       setProperties(response.data)
       // console.log(response.data)
@@ -41,14 +36,23 @@ function SearchResults() {
   }, []);
   if (error) return `Error: ${error.message}`;
 
-  const sort = (e) => {
-    e.preventDefault();
-    console.log('unsorted')
-    console.log(properties)
-    console.log('sorted');
-    setProperties(quickSortArray(properties, 'title'))
+  // pagination
+  const itemsPerPage = 9
+  const handlePageClick = (event) => {
+    const newOffset = event.selected * itemsPerPage % properties.length;
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+    setItemOffset(newOffset);
+  };
+
+  // sort dropdown
+  const handleSortOptionClick = (e) => {
+    // e.preventDefault()
+    console.log(`sort by: ${e.value}`)
+    setSortTarget(e.value)
+    const sorted = qsRanju(properties, sortTarget)
+    setProperties(sorted)
   }
-  // console.log(properties)
+
   return (
     <>
       <div className={styles['header']}>
@@ -65,6 +69,8 @@ function SearchResults() {
           onPageCountChange={(e) => setPageCount(e)} 
           itemsPerPage={itemsPerPage}
           itemOffset={itemOffset}
+          sortOption={sortTarget}
+          onSortOptionChange={handleSortOptionClick}
           />
       </div>
       <div className={styles['nearby']}>

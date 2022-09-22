@@ -32,23 +32,8 @@
     height: 30rem;
 }
 
-.filter-dropdown {
-    display: flex;
-    gap: 1.5rem;
-    cursor: pointer;
-    font-family: "Montserrat";
-}
-
 .dropdown {
-    position: absolute;
-
-    background: #FFF;
-    border: 0.125rem black solid;
-    border-radius: 0.8rem;
-    z-index: 10;
-
-    font-family: "Montserrat";
-    text-align: left;
-    padding: 0.5rem;
+    display: flex;
     gap: 0.2rem;
+    align-items: baseline;
 }
