@@ -1,0 +1,39 @@
+
+.results-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+#section-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 0 0 3rem 0;
+}
+.result-options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.property-cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 3.5rem;
+}
+/* .property-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 27rem);
+    gap: 3.5rem;
+    justify-content: space-between;
+  } */
+.card {
+    width: 27rem;
+    height: 30rem;
+}
+
+.dropdown {
+    display: flex;
+    gap: 0.2rem;
+    align-items: baseline;
+}

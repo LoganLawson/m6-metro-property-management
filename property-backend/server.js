@@ -4,7 +4,7 @@ const { MongoClient } = require("mongodb");
 const app = express()
 const port = 3005
 
-const uri = "mongodb://root:example@localhost:27017";
+const uri = "mongodb://root:example@mongo:27017";
 const options = { authSource: "admin" };
 const client = new MongoClient(uri, options);
 

@@ -1,0 +1,57 @@
+.container {
+    width: 100%;
+    font-family: 'Montserrat';
+    color: #2F2E41;
+
+    display: flex;
+    gap: 1rem;
+}
+.search-box {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 1rem;
+
+    flex-grow: 1;
+
+    box-sizing: border-box;
+    padding: 0.5rem 1rem;
+
+    border: 0.125rem solid #2F2E41;
+    border-radius: 1.2rem;
+}
+.search-box textarea {
+    outline: none;
+    border: none;
+    resize: none;
+    overflow: hidden;
+    height: 1.6rem;
+    
+    font-size: 1.5rem;
+}
+#looking-glass {
+    align-self: center;
+    height: 2.8rem;
+}
+.location-tags li {
+    background: #352ebd;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.save-search {
+    border: 0.125rem solid #2F2E41;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    font-size: 1.5rem;
+    font-weight: 500;
+}

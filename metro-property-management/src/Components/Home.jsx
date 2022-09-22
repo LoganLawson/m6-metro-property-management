@@ -24,7 +24,7 @@ function Home() {
       <ContactSection />
       <div className={styles.container}>
         <h1>Quick Sort Demo</h1>
-        <Link to="/Logan">
+        <Link to="/SearchResults">
           {" "}
           <h2>Logan</h2>{" "}
         </Link>
