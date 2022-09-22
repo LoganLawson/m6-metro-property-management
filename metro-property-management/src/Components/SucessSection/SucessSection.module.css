@@ -92,3 +92,10 @@
 .dot.active {
   background: rgb(32, 32, 32);
 }
+
+@media only screen and (min-width: 2000px) {
+  .wrapper {
+    width: 50%;
+    margin: 0 auto;
+  }
+}

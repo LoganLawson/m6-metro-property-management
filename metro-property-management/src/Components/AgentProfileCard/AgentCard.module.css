@@ -1,0 +1,24 @@
+.card {
+  background-color: #f2f2f2;
+  padding: 2.938rem 5.813rem;
+  border-radius: 20px;
+}
+
+.infoDetails {
+  display: flex;
+  gap: 0.938rem;
+  align-items: center;
+  line-height: 0.3em;
+  font-size: 1rem;
+}
+
+.agentName {
+  text-align: center;
+  font-size: 1.375rem;
+  font-weight: 700;
+}
+
+.contactIcon {
+  width: 1.875rem;
+  height: auto;
+}
