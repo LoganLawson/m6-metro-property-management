@@ -93,9 +93,7 @@
   background: rgb(32, 32, 32);
 }
 
-@media only screen and (min-width: 2000px) {
-  .wrapper {
-    width: 50%;
-    margin: 0 auto;
-  }
+.wrapper {
+  max-width: 104.267rem;
+  margin: 0 auto;
 }

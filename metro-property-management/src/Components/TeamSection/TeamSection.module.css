@@ -5,11 +5,6 @@
   padding-top: 5em;
 }
 
-/* .wrapper {
-  width: 80%;
-  margin: 0 auto;
-} */
-
 .sectionHead {
   font-family: "Montserrat";
   font-style: normal;
@@ -63,7 +58,7 @@
 .appraisalContainer {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .button {
@@ -75,4 +70,9 @@
   font-size: 1.5rem;
 
   padding: 1.25rem;
+}
+
+.infoContainer {
+  display: flex;
+  gap: 8.375rem;
 }

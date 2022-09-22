@@ -14,7 +14,10 @@
 
 .heroContent {
   text-align: start;
-  padding-left: 4em;
+  padding-left: 5.063rem;
+  /* border: 4px solid salmon; */
+  max-width: 125.267rem;
+  margin: 0 auto;
 }
 
 .heroTitle {
@@ -63,4 +66,8 @@
 
 .cardTextArrow {
   padding-left: 0.8em;
+}
+
+.heroCards:hover {
+  background-color: #575a89;
 }
