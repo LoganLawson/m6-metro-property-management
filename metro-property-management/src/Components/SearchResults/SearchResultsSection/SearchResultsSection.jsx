@@ -5,6 +5,7 @@ import dropdownStyles from './Dropdown.module.js'
 
 import downCaret from '../../../images/down-caret-dark.svg';
 import Select from 'react-select'
+import ToggleButton from 'react-toggle-button'
 
 import PropertyCard from '../../PropertyCard/PropertyCard';
 
@@ -49,7 +50,13 @@ function SearchResultsSection(props) {
               isSearchable={0}
               />
           </div>
-          <div>Show map</div>
+          <div id={styles['show-map']}>
+            <span>Sow Amenity Map</span>
+            <ToggleButton
+              value={props.isMapOpen}
+              onToggle={props.onMapToggle}
+                />
+          </div>
         </div>
         <div className={styles['property-cards']}>{propertyCards}</div>
       </div>
