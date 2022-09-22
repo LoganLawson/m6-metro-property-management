@@ -1,0 +1,8 @@
+.mapContainer{
+    width: 50rem;
+    height: 50rem;
+    border-radius: 1rem;
+}
+.googleMapContainer{
+    position: absolute;
+}
