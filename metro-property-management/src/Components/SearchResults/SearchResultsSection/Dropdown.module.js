@@ -13,7 +13,7 @@ const customStyles = {
         '&:hover': {
             background: '#f2f2f2',
         },
-        borderBottom: '0.1rem solid #2F2E41',
+        // borderBottom: '0.1rem solid #2F2E41',
         color: '#2F2E41',
         fontWeight: state.isSelected ? 'bold' : 'normal',
         padding: '0.5rem 1rem',
