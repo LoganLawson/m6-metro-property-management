@@ -92,3 +92,8 @@
 .dot.active {
   background: rgb(32, 32, 32);
 }
+
+.wrapper {
+  max-width: 104.267rem;
+  margin: 0 auto;
+}

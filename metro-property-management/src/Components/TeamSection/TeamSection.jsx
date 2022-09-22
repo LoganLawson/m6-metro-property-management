@@ -24,30 +24,34 @@ const TeamSection = () => {
           />
         </div>
         <div className={styles.teamInfo}>
-          <TeamInfoCard
-            phoneNum="021 771 700"
-            email="zsuzsanna@metronz.co.nz"
-            linkedinName="Zsuzsanna Tantos-Rangi"
-          />
-          <TeamInfoCard
-            phoneNum="021 771 700"
-            email="zsuzsanna@metronz.co.nz"
-            linkedinName="Zsuzsanna Tantos-Rangi"
-          />
-          <TeamInfoCard
-            phoneNum="021 771 700"
-            email="zsuzsanna@metronz.co.nz"
-            linkedinName="Zsuzsanna Tantos-Rangi"
-          />
-          <TeamInfoCard
-            phoneNum="021 771 700"
-            email="zsuzsanna@metronz.co.nz"
-            linkedinName="Zsuzsanna Tantos-Rangi"
-          />
-        </div>
-        <div className={styles.appraisalContainer}>
-          <img src={teamArrow} alt="arrow" />
-          <div className={styles.button}>Get a Free Appraisal</div>
+          <div className={styles.infoWrapper}>
+            <div className={styles.infoContainer}>
+              <TeamInfoCard
+                phoneNum="021 771 700"
+                email="zsuzsanna@metronz.co.nz"
+                linkedinName="Zsuzsanna Tantos-Rangi"
+              />
+              <TeamInfoCard
+                phoneNum="021 771 700"
+                email="zsuzsanna@metronz.co.nz"
+                linkedinName="Zsuzsanna Tantos-Rangi"
+              />
+              <TeamInfoCard
+                phoneNum="021 771 700"
+                email="zsuzsanna@metronz.co.nz"
+                linkedinName="Zsuzsanna Tantos-Rangi"
+              />
+              <TeamInfoCard
+                phoneNum="021 771 700"
+                email="zsuzsanna@metronz.co.nz"
+                linkedinName="Zsuzsanna Tantos-Rangi"
+              />
+            </div>
+            <div className={styles.appraisalContainer}>
+              <img src={teamArrow} alt="arrow" />
+              <div className={styles.button}>Get a Free Appraisal</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
