@@ -81,26 +81,26 @@ function PropertySearchPopup(){
                     className={showDistDropDown ? "active" : undefined }
                     onClick={() => toggleDistDropDown()}
                     onBlur={(e) =>
-                    dismissHandler(e)
+                        dismissHandler(e)
                     }
                     >
                     <div className="buttonText">{selectDistrict ? selectDistrict : "District"} 
                     <div className="chevronDown"> </div>
                     </div>
                     {showDistDropDown && (
-                    <DropDown
+                        <DropDown
                         items={districts()}
                         showDropDown={false}
                         toggleDropDown={() => toggleDistDropDown()}
                         itemSelection={districtSelection}
-                    />
-                    )}
+                        />
+                        )}
                 </button>
                 <button
                     className={showDistDropDown ? "dropdownButton" : "dropdownButton"}
                     onClick={() => toggleSubDropDown()}
                     onBlur={(e) =>
-                    dismissHandler(e)
+                        dismissHandler(e)
                     }
                 >
                     <div className="buttonText">{selectSuburb ? selectSuburb : "Suburb"} 
@@ -112,9 +112,13 @@ function PropertySearchPopup(){
                         showDropDown={false}
                         toggleDropDown={() => toggleSubDropDown()}
                         itemSelection={suburbSelection}
-                    />
-                    )}
+                        />
+                        )}
                 </button>
+            </div>
+            <div className="rentPerWeek">
+                <div className="category"> <p>Rent per Week</p> </div>
+                <input type="range" min="1" max="100" value="1500+" class="slider"></input>
             </div>
             <div className="propertyDetailsList">
                 <div className="propertyDetails">
