@@ -37,3 +37,12 @@
     gap: 0.2rem;
     align-items: baseline;
 }
+
+#show-map {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+#show-map span{
+    text-decoration: underline;
+}
