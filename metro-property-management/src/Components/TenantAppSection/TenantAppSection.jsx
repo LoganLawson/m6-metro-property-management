@@ -1,6 +1,7 @@
 import styles from "./TenantAppSection.module.css";
 import processImg from "../../images/tenant-application-process.png";
 import teamArrow from "../../images/team-arrow.png";
+import { Link } from "react-router-dom";
 
 const TenantAppSection = () => {
   return (
@@ -15,7 +16,8 @@ const TenantAppSection = () => {
         <img src={teamArrow} alt="arrow" />
         <div className={styles.buttonGroup}>
           <div className={styles.secondaryButton}>Search Rentals</div>
-          <div className={styles.button}>Apply Now</div>
+          {/* <div className={styles.button}>Apply Now</div> */}
+          <Link to='/ApplicationForm' className={styles.button}>Apply Now</Link>
         </div>
       </div>
     </div>

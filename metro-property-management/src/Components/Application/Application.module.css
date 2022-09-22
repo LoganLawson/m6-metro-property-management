@@ -1,0 +1,189 @@
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5rem;
+  font-family: "Montserrat";
+  font-style: normal;
+}
+.line {
+  width: 100%;
+}
+.formborder {
+  border-radius: 20px;
+  width: 80rem;
+  box-shadow: 0rem 0.625rem 1.875rem 0.313rem rgba(0, 0, 0, 0.2);
+}
+.formsection {
+  padding-left: 6em;
+  padding-right: 6em;
+}
+.formsectionname {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
+  font-weight: 750;
+  font-size: 1.2em;
+  height: 2em;
+  background-color: #f2f2f2;
+  padding-left: 6rem;
+  padding-top: 1rem;
+}
+.formSectionNameAdditional {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.p1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
+  font-weight: 750;
+  font-size: 1.2em;
+  height: 2em;
+  background-color: #f2f2f2;
+  padding-left: 6rem;
+  padding-top: 1rem;
+  margin: 0%;
+}
+.p2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
+  font-weight: 500;
+  font-size: 1.2em;
+  height: 2em;
+  background-color: #f2f2f2;
+  padding-left: 6rem;
+  padding-top: 0rem;
+  margin: 0%;
+}
+.formtype {
+  text-align: start;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+.formname {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+.formtext,
+label {
+  text-align: left;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+.generalInput {
+  height: 2em;
+  border: 0px;
+}
+.generalInput:hover {
+  box-shadow: 0rem 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+}
+.widerInput {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 50em;
+  height: 2em;
+  border: 0px;
+}
+.smallInput {
+  width: 10%;
+  height: 2em;
+  border: 0px;
+}
+.gridContainer {
+  display: grid;
+  grid-template-columns: 60% auto auto;
+}
+.gridItem {
+  text-align: left;
+}
+.horizontalAlign {
+  display: flex;
+  align-items: center;
+}
+.footnote {
+  text-align: left;
+  font-weight: 200;
+  font-size: 0.8em;
+}
+.bottomButtons {
+  width: 80rem;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 4em;
+}
+.submitButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 1.5rem;
+  background: #2f2e41;
+  border: 0.125rem solid #2f2e41;
+  border-radius: 1.25rem;
+  color: white;
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding: 1.25rem;
+}
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  width: 10rem;
+  height: 1.5rem;
+  color: #2f2e41;
+  border: none;
+  border-radius: 1.25rem;
+  background-color: white;
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding: 1.25rem;
+}
+.chevron {
+  border-style: solid;
+  border-width: 0.15em 0.15em 0 0;
+  content: "";
+  display: inline-block;
+  height: 0.45em;
+  left: 0.15em;
+  position: relative;
+  top: 0.15em;
+  transform: rotate(-135deg);
+  vertical-align: top;
+  width: 0.45em;
+  margin-left: 5px;
+}
+
+.fullRow {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.halfRow {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+.twoColumn {
+  display: flex;
+}
+.checkbox {
+  width: 2em;
+  margin-left: 8em;
+  margin-right: 1em;
+}
+a {
+  text-decoration: none;
+  color: #2f2e41;
+}
+a:visited {
+  color: #2f2e41;
+}
