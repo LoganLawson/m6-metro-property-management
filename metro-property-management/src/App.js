@@ -3,13 +3,13 @@ import "@fontsource/montserrat";
 import Home from './Components/Home'
 import SearchResultsPage from './Components/SearchResults/SearchResultsPage'
 import BrandonSort from './Components/BrandonSort'
-import RanjuSort from './Components/RanjuSort'
+import PropertyListRanju from './Components/RanjuSort/PropertyListRanju';
+import ApplicationForm from './Components/ApplicationForm';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ExerciseList from './Components/ExerciseList';
 import EditExercise from './Components/EditExercise';
 import CreateExercise from './Components/CreateExercise';
 import CreateUser from './Components/CreateUser';
-import PropertyListRanju from './Components/PropertyListRanju';
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
           <Route path="/Home" element={<Home/>} />
 					<Route path="/Tenants/Rentals" element={<SearchResultsPage/>} />
 					<Route path="/Ranju" element={<RanjuSort/>} />
+          <Route path="/ApplicationForm" element={<ApplicationForm/>} />
 					<Route path="/Brandon" element={<BrandonSort/>} />
 					<Route path="/exercisehome" element={<ExerciseList/>} />
 					<Route path="/edit/:id" element={<EditExercise/>} />

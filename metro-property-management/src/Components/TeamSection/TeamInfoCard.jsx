@@ -6,15 +6,15 @@ import linkedin from "../../images/linkedn-circle.svg";
 const TeamInfoCard = ({ phoneNum, email, linkedinName }) => {
   return (
     <div className={styles.infoCard}>
-      <div className={styles.phone}>
+      <div className={styles.infoDetails}>
         <img src={phone} alt="phone-icon" />
         <p className={styles.infoCardText}>{phoneNum}</p>
       </div>
-      <div className={styles.email}>
+      <div className={styles.infoDetails}>
         <img src={envelope} alt="email-icon" />
         <p className={styles.infoCardText}>{email}</p>
       </div>
-      <div className={styles.linkedin}>
+      <div className={styles.infoDetails}>
         <img src={linkedin} alt="linkedin-icon" />
         <p className={styles.infoCardText}>{linkedinName}</p>
       </div>
