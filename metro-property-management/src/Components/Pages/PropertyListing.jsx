@@ -132,7 +132,7 @@ const PropertyListing = () => {
                     >
                       Apply Now
                     </Link>
-                    <div className={styles.button}>Search Rentals</div>
+                    <div className={styles.button}>Book a Viewing</div>
                   </div>
                 </div>
               </div>
