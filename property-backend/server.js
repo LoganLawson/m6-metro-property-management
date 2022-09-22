@@ -6,6 +6,7 @@ const port = 3005;
 require("dotenv").config();
 
 const uri = process.env.MONGODB_CONNECTION;
+
 const options = { authSource: "admin" };
 const client = new MongoClient(uri, options);
 

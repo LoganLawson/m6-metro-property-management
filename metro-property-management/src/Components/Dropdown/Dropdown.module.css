@@ -1,0 +1,17 @@
+.container {
+
+    position: relative;
+    width:100%;
+
+    font-family: "Montserrat";
+    display: flex;
+    gap: 2rem;
+}
+/* .container select {
+    display: none;
+} */
+
+.select-selected {
+    background-color: red;
+  }
+  
