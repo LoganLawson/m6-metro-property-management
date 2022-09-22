@@ -6,7 +6,7 @@ function GoogleMapTemp() {
   return (
     <>
       <PropertySearchPopup/>
-        {/* <PropertyMap/> */}
+      {/* <PropertyMap/> */}
     </>
   )
 }
