@@ -1,7 +1,6 @@
 const express = require("express");
 var cors = require("cors");
 const { MongoClient, ObjectId } = require("mongodb");
-const { text } = require("express");
 const app = express();
 const port = 3005;
 require("dotenv").config();
@@ -46,7 +45,6 @@ app.use("/properties", router);
 router.get("/", cors(), async (req, res) => {
   const properties = await retrieve(req.query);
   res.send(properties);
-  console.log(req.query.pets);
 });
 
 router.get("/property", cors(), async (req, res) => {
