@@ -19,6 +19,61 @@
 .closeButton button:hover{
   background-color: rgba(0, 0, 0, 0);
 }
+.heading{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+  font-weight: 700;
+  color: #2f2e41;
+}
+.categoryName{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 1em;
+  font-weight: 500;
+  color: #2f2e41;
+}
+.category{
+  margin-top: 1em;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 1em;
+  font-weight: 500;
+  color: #2f2e41;
+}
+.categoryHorizontal{
+  margin-top: 1em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 1em;
+  font-weight: 500;
+  color: #2f2e41;
+}
+.dropButtonsHorizontal{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  gap:2em;
+}
+.selectButton{
+  width: 100%;
+  border: 1.2px solid #2f2e41;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+.categoryName p{
+  margin: 0px;
+}
+.propertyDetails{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .results-1 {
   display: flex;
   flex-direction: column;
@@ -56,4 +111,51 @@
   display: flex;
   gap: 0.2rem;
   align-items: baseline;
+}
+.advancedSearchRadio{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.radioButtons{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.radioButtons input{
+  width: 1.8em;
+  margin-right: 1em;
+}
+.radioButtons label{
+  font-weight: 500;
+  font-size: 1em;
+}
+.keywordInput{
+  width: 100%;
+  border: solid 0.15em #2f2e41;
+  border-radius: 0.7em;
+  height: 2.6em;
+}
+.searchButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7rem;
+  height: 1.2rem;
+  background: #2f2e41;
+  border: none;
+  border-radius: 1.25rem;
+  color: white;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 1.25rem;
+}
+.navButtons{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #2f2e41;
+  font-weight: 500;
+  font-size: 1.4rem;
+  padding-top: 1em;
 }
