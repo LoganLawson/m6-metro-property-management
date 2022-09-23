@@ -2,11 +2,6 @@ import PropertyCard from "../PropertyListing/PropertyCard";
 import { useParams } from "react-router-dom";
 import styles from "../PropertyListing/PropertyListing.module.css";
 import placeholder1 from "../../images/placeholders/image-large.png";
-import placeholderS1 from "../../images/placeholders/image-small1.png";
-import placeholderS2 from "../../images/placeholders/image-small2.png";
-import placeholderS3 from "../../images/placeholders/image-small3.png";
-import placeholderS4 from "../../images/placeholders/image-small4.png";
-import placeholderS5 from "../../images/placeholders/image-small5.png";
 import bedGlyph from "../../images/bed.svg";
 import bathGlyph from "../../images/bath.svg";
 import carGlyph from "../../images/car.svg";
@@ -18,30 +13,36 @@ import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
 import PropertyMap from "../GoogleMap/PropertyMap";
+import missingImage from "../../images/missing-image.webp";
 
 const PropertyListing = () => {
   const { propertyId } = useParams();
   console.log(propertyId);
 
   const [properties, setProperties] = useState([]);
+  const [propertyImages, setPropertyImages] = useState([missingImage]);
 
-  const smallPropertyImgs = [
-    placeholderS1,
-    placeholderS2,
-    placeholderS3,
-    placeholderS4,
-    placeholderS5,
-  ];
-
+  const url = `http://localhost:3005/properties/property?id=${propertyId}`;
+  console.log(url);
   useEffect(() => {
-    axios.get("http://localhost:3005/properties/").then((response) => {
+    axios.get(url).then((response) => {
       setProperties(response.data);
-    });
-  }, []);
+      console.log(response.data);
 
-  const map =
-    properties && properties.slice(1, 2).map((property) => property.title);
-  console.log(map);
+      const imsrc =
+        response.data.imglinks && JSON.parse(response.data.imglinks)
+          ? JSON.parse(response.data.imglinks)
+          : missingImage;
+
+      setPropertyImages(imsrc);
+    });
+  }, [url]);
+
+  console.log("setProperties: ", properties);
+
+  // const map =
+  //   properties && properties.slice(1, 2).map((property) => property.title);
+  // console.log(map);
 
   return (
     <>
@@ -58,30 +59,34 @@ const PropertyListing = () => {
                 />
               </div>
               <div className={styles.smallIcons}>
-                {smallPropertyImgs.map((val, index) => {
-                  return (
-                    <img
-                      src={val}
-                      alt="placeholder"
-                      key={index}
-                      className={styles.smallImg}
-                    />
-                  );
-                })}
+                {propertyImages &&
+                  propertyImages.map((val, index) => {
+                    return (
+                      <img
+                        src={val}
+                        alt="placeholder"
+                        key={index}
+                        className={styles.smallImg}
+                      />
+                    );
+                  })}
               </div>
             </div>
             <div className={styles.propertyContainer}>
               <div className={styles.titleContainer}>
-                <h1 className={styles.propertyTitle}>{map}</h1>
+                <h1 className={styles.propertyTitle}>{properties.title}</h1>
                 <input type="checkbox" className={styles.heartCheck} />
               </div>
               <div className={styles.propertyDetails}>
                 <div className={styles.propertyDetailsLeft}>
-                  <h1 className={styles.propertyRent}>$500 per week</h1>
+                  <h1 className={styles.propertyRent}>${properties.rate}</h1>
                   <div className={styles["info-banner"]}>
-                    <img src={bedGlyph} alt="bed glyph" />1
-                    <img src={bathGlyph} alt="bath glyph" />1
-                    <img src={carGlyph} alt="car glyph" />0
+                    <img src={bedGlyph} alt="bed glyph" />
+                    {properties.bedrooms}
+                    <img src={bathGlyph} alt="bath glyph" />
+                    {properties.bathrooms}
+                    <img src={carGlyph} alt="car glyph" />
+                    {properties.carparks}
                   </div>
                   <div className={styles.propertyInfo}>
                     <p className={styles.listingText}>
