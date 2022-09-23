@@ -40,10 +40,6 @@ const PropertyListing = () => {
 
   console.log("setProperties: ", properties);
 
-  // const map =
-  //   properties && properties.slice(1, 2).map((property) => property.title);
-  // console.log(map);
-
   return (
     <>
       <Navbar />
@@ -52,15 +48,20 @@ const PropertyListing = () => {
           <div className={styles.wrapper}>
             <div className={styles.carousel}>
               <div className={styles.mainImg}>
-                <img
-                  src={placeholder1}
-                  alt="placeholder"
-                  className={styles.largeIcon}
-                />
+                {propertyImages &&
+                  propertyImages.slice(0, 1).map((val, index) => {
+                    return (
+                      <img
+                        src={val}
+                        alt="placeholder"
+                        className={styles.largeIcon}
+                      />
+                    );
+                  })}
               </div>
               <div className={styles.smallIcons}>
                 {propertyImages &&
-                  propertyImages.map((val, index) => {
+                  propertyImages.slice(0, 5).map((val, index) => {
                     return (
                       <img
                         src={val}
@@ -79,14 +80,16 @@ const PropertyListing = () => {
               </div>
               <div className={styles.propertyDetails}>
                 <div className={styles.propertyDetailsLeft}>
-                  <h1 className={styles.propertyRent}>${properties.rate}</h1>
+                  <h1 className={styles.propertyRent}>
+                    ${properties.rate} per week
+                  </h1>
                   <div className={styles["info-banner"]}>
                     <img src={bedGlyph} alt="bed glyph" />
                     {properties.bedrooms}
                     <img src={bathGlyph} alt="bath glyph" />
                     {properties.bathrooms}
                     <img src={carGlyph} alt="car glyph" />
-                    {properties.carparks}
+                    {properties.Parking}
                   </div>
                   <div className={styles.propertyInfo}>
                     <p className={styles.listingText}>
