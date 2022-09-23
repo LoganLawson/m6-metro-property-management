@@ -1,10 +1,12 @@
 import React from 'react'
 import PropertyMap from './GoogleMap/PropertyMap'
+import PropertySearchPopup from './PopupWindows/PropertySearchPopup'
 
 function GoogleMapTemp() {
   return (
     <>
-        <PropertyMap/>
+      <PropertySearchPopup/>
+      {/* <PropertyMap/> */}
     </>
   )
 }
