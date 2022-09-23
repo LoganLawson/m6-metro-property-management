@@ -10,9 +10,7 @@ function PropertyMap() {
         googleMapsApiKey:"AIzaSyD4hBbwulv5gx7S83sLQ1MzMkIpP-AVrv0"
     })
     return (
-        <div>
-            <Map isLoaded = {isLoaded} />
-        </div>
+        <Map isLoaded = {isLoaded} />
     )
 }
 
