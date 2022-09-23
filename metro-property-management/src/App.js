@@ -1,6 +1,6 @@
 import "./App.css";
 import "@fontsource/montserrat";
-import GoogleMapTemp from './Components/GoogleMapTemp';
+import GoogleMapTemp from "./Components/GoogleMapTemp";
 import Home from "./Components/Home";
 import SearchResultsPage from "./Components/SearchResults/SearchResultsPage";
 import BrandonSort from "./Components/BrandonSort";
@@ -14,14 +14,17 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-					<Route path="/googlemaptemp" element={<GoogleMapTemp/>} />
+          <Route path="/googlemaptemp" element={<GoogleMapTemp />} />
           <Route path="/" element={<Home />} />
           <Route path="/Home" element={<Home />} />
-          <Route path="/Tenants/Rentals" element={<SearchResultsPage/>} />
+          <Route path="/Tenants/Rentals" element={<SearchResultsPage />} />
           <Route path="/ApplicationForm" element={<ApplicationForm />} />
           <Route path="/Brandon" element={<BrandonSort />} />
           <Route path="/properties" element={<PropertyListRanju />} />
-          <Route path="/property-listing/:propertyId" element={<PropertyListing />}/>
+          <Route
+            path="/Tenants/Rentals/property-listing/:propertyId"
+            element={<PropertyListing />}
+          />
         </Routes>
       </Router>
     </div>
