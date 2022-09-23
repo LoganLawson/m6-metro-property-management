@@ -22,7 +22,7 @@ function App() {
           <Route path="/Brandon" element={<BrandonSort />} />
           <Route path="/properties" element={<PropertyListRanju />} />
           <Route
-            path="/Tenants/Rentals/property-listing/:propertyId"
+            path="/Tenants/Rentals/Listing/:propertyId"
             element={<PropertyListing />}
           />
         </Routes>

@@ -14,7 +14,7 @@ function ApplySort(properties, category)
   case "bathrooms":
     listSorted = quickSortBathrooms(properties);
     break;
-  case "carparks":
+  case "Parking":
     listSorted = quickSortCarparks(properties);
     break;
   default:
@@ -115,7 +115,7 @@ function quickSortCarparks(listToSort){
   let right = [];
   let index = 0;
   while(index < listToSort.length-1){
-    if( listToSort[index].carparks > pivot.carparks){
+    if( listToSort[index].Parking > pivot.Parking){
       left.push(listToSort[index])
     }
     else{

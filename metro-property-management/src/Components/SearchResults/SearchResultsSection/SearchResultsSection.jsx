@@ -33,7 +33,7 @@ function SearchResultsSection(props) {
     { label: 'Featured', value: 'title' },
     { label: 'Bedrooms', value: 'bedrooms' },
     { label: 'Bathrooms', value: 'bathrooms' },
-    { label: 'Carparks', value: 'carparks' },
+    { label: 'Parking', value: 'Parking' },
     { label: 'Rate', value: 'rate' },
   ];
 

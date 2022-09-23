@@ -15,6 +15,8 @@ import axios from "axios";
 import PropertyMap from "../GoogleMap/PropertyMap";
 import missingImage from "../../images/missing-image.webp";
 
+import Breadcrumbs from '../BreadCrumbs/BreadCrumbs';
+
 const PropertyListing = () => {
   const { propertyId } = useParams();
   console.log(propertyId);
@@ -43,6 +45,7 @@ const PropertyListing = () => {
   return (
     <>
       <Navbar />
+      <Breadcrumbs />
       <div className={styles.container}>
         <PropertyCard>
           <div className={styles.wrapper}>

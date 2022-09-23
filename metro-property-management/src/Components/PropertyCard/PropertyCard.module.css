@@ -13,6 +13,7 @@
     background: #fff;
 
     box-shadow: 0px 10px 30px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 .image-section {
     height: 70%;

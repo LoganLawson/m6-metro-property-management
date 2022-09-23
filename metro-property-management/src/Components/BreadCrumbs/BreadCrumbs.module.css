@@ -6,6 +6,14 @@
 
     padding: 0.5rem 1.5rem;
 }
+.back {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    width: 12rem;
+
+    cursor: pointer;
+}
 .crumb {
     display: flex;
     align-items: baseline;

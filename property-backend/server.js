@@ -4,6 +4,7 @@ const { MongoClient, ObjectId } = require("mongodb");
 const app = express();
 const port = 3005;
 require("dotenv").config();
+app.use(cors())
 
 const uri = process.env.MONGODB_CONNECTION;
 
