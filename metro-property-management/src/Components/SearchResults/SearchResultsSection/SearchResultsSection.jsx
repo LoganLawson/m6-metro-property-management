@@ -63,7 +63,7 @@ function SearchResultsSection(props) {
             />
           </div>
           <div id={styles['show-map']}>
-            <span>Sow Amenity Map</span>
+            <span>Show Amenity Map</span>
             <ToggleButton
               value={isMapOpen}
               onToggle={handleMapToggle}
